@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap');
+.user-menu .primary-theme{
+  border-radius: 19px;
+  background-color: #FFFFFF !important;
+  box-shadow: 0 0 6px 0 rgba(12,24,49,0.2);
+  height: 38px !important;
+  padding: 0 11px !important;
+}
+.cause-rating-strip .v-rating .v-icon{
+  padding: 0rem;
+}
+.user-menu i{
+  color:#0C1831 !important;
+}

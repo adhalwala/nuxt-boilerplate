@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap');
+.primary-dark-bg{
+  background-color: #0C1831;
+}
+.cause-rating-strip .v-rating .v-icon{
+  padding: 0rem;
+}
+.strip-info{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.24px;
+  /* line-height: 19px; */
+  font-weight: 400;
+}

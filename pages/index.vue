@@ -2,9 +2,17 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
-        <logo />
+        <logo alt="Main logo" width="130" />
         <vuetify-logo />
       </div>
+      <heading-h1-alt text="fasdf" />
+      <heading-h3 text="df" />
+      <testimonials
+        imgsrc="/cause-logo.svg"
+        name="Josey R, Elwood, VIC"
+        description="It’s basically free donations"
+      />
+      <my-button label="button" size="large" />
       <v-card>
         <v-card-title class="headline">
           Welcome to the Vuetify + Nuxt.js template
@@ -83,11 +91,19 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import MyButton from '~/components/Button.vue'
+import HeadingH1Alt from '~/components/HeadingH1Alt.vue'
+import HeadingH3 from '~/components/HeadingH3.vue'
+import Testimonials from '~/components/Testimonials.vue'
 
 export default {
   components: {
     Logo,
     VuetifyLogo,
+    MyButton,
+    HeadingH1Alt,
+    HeadingH3,
+    Testimonials,
   },
 }
 </script>
