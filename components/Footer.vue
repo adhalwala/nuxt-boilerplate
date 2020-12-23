@@ -1,17 +1,8 @@
 <template>
   <div class="d-flex logos-showcase banner-wrapper">
-    <v-col class="col-6 text-left d-flex">
-      <div class="align-self-center">
-        <h2>{{ bannertitle }}</h2>
-        <h3>{{ bannersubtitle }}</h3>
-        <p>
-          Add the Cause Button and start raising money for
-          <strong>sustainable future </strong>– for free!
-        </p>
-        <my-button :icon="icon" :label="label" class="text-left float-left" />
-      </div>
+    <v-col class="col-12 text-left">
+      <div class="align-self-center">fsadf</div>
     </v-col>
-    <banner-image class="col-6" />
   </div>
 </template>
 <style lang="scss" scoped>
@@ -43,22 +34,11 @@
     line-height: 33px;
     margin-bottom: 48px;
     margin-top: 40px;
-    strong {
-      font-weight: bold;
-    }
   }
 }
 </style>
 <script>
-import MyButton from '~/components/Button.vue'
 export default {
-  name: 'Banner',
-  components: { MyButton },
-  props: {
-    label: String,
-    icon: String,
-    bannertitle: String,
-    bannersubtitle: String,
-  },
+  name: 'Footer',
 }
 </script>

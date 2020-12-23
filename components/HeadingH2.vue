@@ -1,5 +1,5 @@
 <template>
-  <h2 class="c-heading black--text">Heading H1</h2>
+  <h2 class="c-heading black--text">{{ text }}</h2>
 </template>
 <style scoped>
 .c-heading {
@@ -14,9 +14,9 @@ export default {
   name: 'HeadingH2',
 
   props: {
-    altText: {
+    text: {
       type: String,
-      default: '',
+      default: 'Heading H2',
     },
     width: {
       type: String,

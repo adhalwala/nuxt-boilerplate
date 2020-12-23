@@ -16,8 +16,8 @@ const Template = (args, { argTypes }) => ({
   template: '<couse-card v-bind="$props" />',
 })
 
-export const CounterPrimary = Template.bind({})
-CounterPrimary.args = {
+export const Default = Template.bind({})
+Default.args = {
   imgsrc: '/charity-icon.svg',
   title: '100% for Charity',
   description:
