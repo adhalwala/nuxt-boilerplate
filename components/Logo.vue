@@ -1,8 +1,5 @@
 <template>
-  <!-- <button type="button" :class="classes" :style="style" @click="onClick">
-    {{ label }}
-  </button> -->
-  <img class="site-logo" :width="style" src="/cause-logo.svg" />
+  <img class="site-logo" :width="width" src="/cause-logo.svg" />
 </template>
 
 <script>
@@ -18,7 +15,7 @@ export default {
     },
     width: {
       type: String,
-      default: '',
+      default: '118',
     },
   },
 }

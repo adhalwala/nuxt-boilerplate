@@ -1,36 +1,23 @@
 <template>
-  <!-- <div>
-    <button type="button" :class="classes" :style="style" @click="onClick">
-      {{ label }}
-    </button>
-    <div class="text-center">
-    <v-btn
-      rounded
-      color="primary"
-      dark
-    >
-      Rounded Button
-    </v-btn>
-  </div>
-  </div> -->
-  <!-- <div class="text-center">
-    <v-btn rounded color="primary" dark>
-      <v-icon>info</v-icon>
-      Rounded Button
-    </v-btn>
-  </div> -->
   <div class="text-center">
     <div>
       <button
-        type="button"
-        class="v-btn v-btn--contained v-btn--rounded theme--light v-size--default primary-theme"
+        type="button banner-btn"
+        class="v-btn v-btn--contained v-btn--rounded v-size--default primary-theme"
       >
-        <v-icon dark left> {{ icon }} </v-icon>{{ label }}
+        <i style="font-size: 24px; margin-right: 5px" :class="icon"></i
+        >{{ label }}
       </button>
     </div>
   </div>
 </template>
-
+<style lang="scss" scoped>
+.banner-btn {
+  i {
+    color: #ffffff !important;
+  }
+}
+</style>
 <script>
 import '~/assets/button.css'
 import MyButton from '~/components/Button.vue'

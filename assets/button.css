@@ -28,17 +28,22 @@
   font-size: 16px;
   padding: 12px 24px;
 }
-.v-application .primary-theme{
-  background-color: #3C76A6 !important;
-  border-color: #3C76A6 !important;
-  color: #FFFFFF;
+.v-application .primary-theme {
+  background-color: #3c76a6 !important;
+  border-color: #3c76a6 !important;
+  color: #ffffff;
   font-weight: 500;
-  font-size: 20px;height: 50px !important;
+  font-size: 20px;
+  height: 50px !important;
   letter-spacing: 0.5px;
   line-height: 26px;
   text-transform: capitalize;
 }
-.v-application .primary-theme:focus,.v-application .primary-theme:active{
-  background-color: #2D597D !important;
-    border-color: #2D597D !important;
+.v-application .primary-theme:focus,
+.v-application .primary-theme:active {
+  background-color: #2d597d !important;
+  border-color: #2d597d !important;
+}
+.banner-btn .v-icon {
+  color: #ffffff;
 }

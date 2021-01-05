@@ -1,11 +1,11 @@
-import Footer from '~/components/Footer.vue'
-import FooterLink from '~/components/FooterLink.vue'
-import FooterSocial from '~/components/FooterSocial.vue'
-import FooterCopyright from '~/components/FooterCopyright.vue'
+import Footers from '~/components/Footer'
+import FooterLink from '~/components/FooterLink'
+import FooterSocial from '~/components/FooterSocial'
+import FooterCopyright from '~/components/FooterCopyright'
 
 export default {
   title: 'Example/Footer',
-  component: Footer,
+  component: Footers,
   FooterLink,
   FooterSocial,
   FooterCopyright,
@@ -16,12 +16,12 @@ export default {
   ],
 }
 
-const Default = (args, { argTypes }) => ({
+const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Footer },
-  template: '<footer v-bind="$props" />',
+  components: { Footers },
+  template: '<footers v-bind="$props" />',
 })
-export const FooterSection = Default.bind({})
+export const FooterSection = Template.bind({})
 FooterSection.args = {}
 
 const FLink = (args, { argTypes }) => ({

@@ -25,7 +25,7 @@ const Template = (args, { argTypes }) => ({
 export const Primary = Template.bind({})
 Primary.args = {
   label: 'Add the button to chrome',
-  icon: 'mdi-heart',
+  icon: 'mdi mdi-heart',
 }
 
 // export const Secondary = Template.bind({})

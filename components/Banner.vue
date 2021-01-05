@@ -11,13 +11,12 @@
         <my-button :icon="icon" :label="label" class="text-left float-left" />
       </div>
     </v-col>
-    <banner-image class="col-6" />
   </div>
 </template>
 <style lang="scss" scoped>
 .banner-wrapper {
-  padding-top: 100px !important;
-  padding-bottom: 100px !important;
+  // padding-top: 100px !important;
+  // padding-bottom: 100px !important;
   h2 {
     color: #3c76a6;
     font-family: Roboto;

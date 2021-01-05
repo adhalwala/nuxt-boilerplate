@@ -1,23 +1,19 @@
 <template>
-  <div class="cta--wrapper">
-    <v-row>
-      <v-col cols="6" sm="6" md="3" lg="3" xl="3">
-        <div class="cta--block">
-          <div class="cta-img-wrapper">
-            <div class="top-img text-center">
-              <img class="" :src="topimg" />
-            </div>
-            <img :src="imgsrc" />
-            <span>{{ title }}</span>
-          </div>
-          <div class="cta--action d-none d-sm-flex">
-            <v-icon left class="cta-link-icon"> {{ icon }} </v-icon>
-            <span class="d-flex">{{ description }}</span>
-          </div>
+  <v-col cols="6" sm="6" md="3" lg="3" xl="3" class="cta--wrapper">
+    <div class="cta--block">
+      <div class="cta-img-wrapper">
+        <div class="top-img text-center">
+          <img class="" :src="topimg" />
         </div>
-      </v-col>
-    </v-row>
-  </div>
+        <img :src="imgsrc" />
+        <span>{{ title }}</span>
+      </div>
+      <div class="cta--action d-none d-sm-flex">
+        <v-icon left class="cta-link-icon"> {{ icon }} </v-icon>
+        <span class="d-flex">{{ description }}</span>
+      </div>
+    </div>
+  </v-col>
 </template>
 <style lang="scss" scoped>
 .cta--wrapper {

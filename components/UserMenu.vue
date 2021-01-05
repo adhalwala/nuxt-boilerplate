@@ -18,7 +18,6 @@ export default {
   props: {
     label: {
       type: String,
-      required: true,
     },
     primary: {
       type: Boolean,
