@@ -29,7 +29,7 @@ BannerLeft.args = {
   bannertitle: 'Plant a tree',
   bannersubtitle: 'when you shop online',
   label: 'Add The Button to Chrome',
-  icon: 'mdi-heart',
+  icon: 'mdi mdi-heart',
 }
 export const BannerRight = BannerImageTemplate.bind({})
 BannerRight.args = {}

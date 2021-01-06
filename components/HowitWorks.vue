@@ -1,7 +1,9 @@
 <template>
   <div class="">
     <div class="gridContainer d-flex align-self-center">
-      <div class="containerOneChildOne col-7 text-left align-self-center pr-10">
+      <div
+        class="containerOneChildOne col-7 text-left align-self-center pr-15 pl-0"
+      >
         <div class="imgContainer">
           <img
             class="mockupImg"
@@ -51,6 +53,7 @@
   // margin: 10px 30px;
   // display: grid;
   // grid-template-columns: 45% 55%;
+  min-height: 600px;
 }
 
 .containerOneChildOne {
@@ -67,7 +70,7 @@
   // margin-top: 30px;
   // margin-left: 20px;
   // border-left: 2px solid #bdbdbd;
-  border-left: 2px solid #151515;
+  border-left: 1px solid #151515;
   h2 {
   }
   h6 {
@@ -90,20 +93,22 @@
   }
   > div {
     border: 0px;
-    padding-bottom: 38px;
+    padding-bottom: 25px;
     position: relative;
     padding-left: 40px;
+    padding-top: 15px;
 
     &.liBgActive {
       &:after {
         content: '';
         position: absolute;
-        left: -3px;
+        left: -2px;
         top: 0;
         width: 3px;
         height: 100%;
         z-index: 99;
-        background: rgb(60, 118, 166);
+        background: #3c76a6;
+        border-radius: 100px;
       }
     }
   }

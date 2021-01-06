@@ -23,6 +23,8 @@
       height: 100%;
     }
   }
+  padding-left: 20px;
+  padding-right: 20px;
   .cta-img-wrapper {
     position: relative;
     > img {
@@ -73,15 +75,16 @@
     position: relative;
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 7px;
     i {
       color: #3c76a6;
       border: 1px solid #3c76a6;
       font-size: 16px;
       padding: 5px;
       border-radius: 100%;
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
       position: absolute;
       left: 10px;
       top: 0;

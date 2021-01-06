@@ -69,7 +69,7 @@
     line-height: 28px;
     position: absolute;
     right: 50px;
-    top: 0;
+    top: 20px;
     bottom: 0;
     margin: auto;
     height: 80px;
@@ -78,21 +78,21 @@
     }
     &:after {
       content: '';
-      width: 20px;
+      width: 16px;
       border: 1px solid #a5d6fe;
       border-left: 0px;
       position: absolute;
-      right: -30px;
+      right: -20px;
       height: 75px;
       top: -10px;
     }
     &:before {
       content: '';
-      width: 20px;
+      width: 16px;
       border: 1px solid #a5d6fe;
       border-right: 0px;
       position: absolute;
-      left: -30px;
+      left: -20px;
       height: 75px;
       top: -10px;
     }

@@ -36,7 +36,7 @@
         </v-row>
       </v-container>
     </div>
-    <div class="primary-dark-bg pt-16 pb-16">
+    <div class="primary-dark-bg charity-wrapper">
       <v-container>
         <v-row style="/*flex-wrap: nowrap*/">
           <couse-card
@@ -104,7 +104,7 @@
         </span>
       </v-container>
     </div>
-    <div class="pt-15 pb-15">
+    <div class="pt-15 pb-15 mb-10">
       <h3 class="text-center free-text-lable">
         Add The Cause Button Now.
         <br />
@@ -148,13 +148,17 @@
         />
       </div>
     </div>
-    <footers />
+    <footers class="mt-15" />
   </div>
 </template>
 <style lang="scss" scoped>
 .home-page,
 .bg-primary {
   background-color: #f3f9ff;
+}
+.charity-wrapper {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .counter-main-wrapper {
   padding-top: 100px;
