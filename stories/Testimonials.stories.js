@@ -23,8 +23,4 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Testimonial = Template.bind({})
-Testimonial.args = {
-  name: 'Josey R, Elwood, VIC',
-  imgsrc: '/cause-logo.svg',
-  description: 'It’s basically free donations',
-}
+Testimonial.args = {}

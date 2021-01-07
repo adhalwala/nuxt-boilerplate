@@ -95,7 +95,7 @@
       font-size: 20px;
       font-weight: bold;
       letter-spacing: 0.3px;
-      line-height: 26px;
+      line-height: 28px;
       padding-left: 42px;
       padding-top: 2px;
       min-height: 40px;

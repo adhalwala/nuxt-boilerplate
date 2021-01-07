@@ -1,18 +1,28 @@
 <template>
   <v-main class="logos-showcase testimonials">
-    <v-container>
-      <v-row style="/*flex-wrap: nowrap*/">
+    <v-carousel
+      height="auto"
+      :show-arrows="false"
+      hide-delimiters
+      v-model="model"
+    >
+      <v-carousel-item v-for="(item, i) in items" :key="i">
         <v-col class="col-12 text-center">
           <div class="align-self-center">
             <div class="--wrapper tex-center d-inline-block">
-              <img :src="imgsrc" />
+              <img :src="item.src" />
             </div>
-            <i class="tex-center d-inline-block col-12">{{ name }}</i>
-            <h3>{{ description }}</h3>
+            <i class="tex-center d-inline-block col-12">{{ name[i] }}</i>
+            <h3>{{ description[i] }}</h3>
           </div>
         </v-col>
-      </v-row>
-    </v-container>
+      </v-carousel-item>
+    </v-carousel>
+    <v-col class="col-12 text-center testimonial-number mt-15">
+      <v-icon class="mr-3" @click="model--"> mdi-chevron-left </v-icon>
+      {{ model + 1 }}/{{ items.length }}
+      <v-icon class="ml-3" @click="model++"> mdi-chevron-right </v-icon>
+    </v-col>
   </v-main>
 </template>
 <style lang="scss" scoped>
@@ -53,24 +63,52 @@
     border: 8px solid #f3f9ff;
     border-radius: 100px;
     background-color: #f7f8f8;
+    overflow: hidden;
     img {
       height: 150px;
       width: 150px;
     }
   }
 }
+.testimonial-number {
+  color: #0c1831;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 21px;
+}
 </style>
 <script>
 export default {
   name: 'Testimonials',
 
-  props: {
-    name: {
-      type: String,
-      default: '',
-    },
-    description: String,
-    imgsrc: String,
+  data() {
+    return {
+      items: [
+        {
+          src: '/cause-logo.svg',
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+        },
+      ],
+      name: ['Josey R, Elwood, VIC', 'Second', 'Third', 'Fourth', 'Fifth'],
+      description: [
+        'It’s basically free donations',
+        'Second',
+        'Third',
+        'Fourth',
+        'Fifth',
+      ],
+      model: 0,
+    }
   },
 }
 </script>
