@@ -108,6 +108,22 @@
       }
     }
   }
+  @media screen and (max-width: 600px) {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 0px;
+    padding-top: 5px;
+    .cta-img-wrapper > img {
+      height: 180px;
+    }
+    .cta-img-wrapper .top-img {
+      height: 40px;
+      width: 40px;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 </style>
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="text-right user-menu">
+  <div class="text-right user-menu header-main">
     <div
       class="v-btn v-btn--contained v-btn--rounded theme--light v-size--default primary-theme"
     >
@@ -8,7 +8,15 @@
     </div>
   </div>
 </template>
-
+<style scoped lang="scss">
+.header-main {
+  @media screen and (max-width: 600px) {
+    i {
+      font-size: 24px !important;
+    }
+  }
+}
+</style>
 <script>
 import '~/assets/usermenu.css'
 

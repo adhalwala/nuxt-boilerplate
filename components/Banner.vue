@@ -8,7 +8,11 @@
           Add the Cause Button and start raising money for
           <strong>sustainable future </strong>– for free!
         </p>
-        <my-button :icon="icon" :label="label" class="text-left float-left" />
+        <my-button
+          :icon="icon"
+          :label="label"
+          class="text-left float-left mb-5 mb-sm-0"
+        />
       </div>
     </v-col>
   </div>
@@ -44,6 +48,31 @@
     margin-top: 40px;
     strong {
       font-weight: bold;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 29px;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 29px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      line-height: 28px;
+      width: 230px;
+      margin-top: 30px;
+      strong {
+        font-weight: normal;
+      }
     }
   }
 }

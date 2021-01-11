@@ -22,6 +22,26 @@
     width: 425px;
     font-size: 16px;
   }
+  @media screen and (max-width: 600px) {
+    padding-left: 30px;
+    h3 {
+      font-size: 20px;
+      letter-spacing: 0.31px;
+      line-height: 30px;
+    }
+    p {
+      font-size: 16px;
+      letter-spacing: 0.3px;
+      line-height: 24px;
+      width: auto;
+    }
+    .learn-more-btn {
+      font-size: 16px;
+      letter-spacing: 0.44px;
+      line-height: 21px;
+      margin-top: 0px;
+    }
+  }
 }
 </style>
 <script>

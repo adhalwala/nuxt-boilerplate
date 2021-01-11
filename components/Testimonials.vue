@@ -20,7 +20,7 @@
     </v-carousel>
     <v-col class="col-12 text-center testimonial-number mt-15">
       <v-icon class="mr-3" @click="model--"> mdi-chevron-left </v-icon>
-      {{ model + 1 }}/{{ items.length }}
+      <span class="bold black-color">{{ model + 1 }}/</span>{{ items.length }}
       <v-icon class="ml-3" @click="model++"> mdi-chevron-right </v-icon>
     </v-col>
   </v-main>
@@ -68,6 +68,24 @@
       height: 150px;
       width: 150px;
     }
+  }
+  @media screen and (max-width: 600px) {
+    .--wrapper {
+      height: 105px;
+      width: 105px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    i {
+      font-size: 16px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    padding-top: 50px !important;
+    padding-bottom: 20px !important;
   }
 }
 .testimonial-number {

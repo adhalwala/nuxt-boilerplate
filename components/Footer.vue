@@ -11,6 +11,10 @@
         </ul>
       </div>
     </div>
+    <div class="tag-line">
+      We are a for-purpose social enterprise<br />
+      Made with <i class="mdi mdi-heart"></i> Melbourne
+    </div>
     <div class="d-flex col-12 footer-social">
       <ul class="align-self-center">
         <li><img src="/facebook.svg" /></li>
@@ -19,10 +23,7 @@
         <li><img src="/instagram.svg" /></li>
       </ul>
     </div>
-    <div class="tag-line">
-      We are a for-purpose social enterprise<br />
-      Made with <i class="mdi mdi-heart"></i> Melbourne
-    </div>
+
     <p class="d-flex col-12 footer-copyright text-center">Cause © 2020</p>
   </footer>
 </template>
@@ -95,6 +96,13 @@
       left: -20px;
       height: 75px;
       top: -10px;
+    }
+    @media screen and (max-width: 768px) {
+      position: relative;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      right: auto;
+      top: auto;
     }
   }
 }

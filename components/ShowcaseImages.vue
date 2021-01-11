@@ -259,6 +259,16 @@
   p {
     width: 425px;
   }
+  @media screen and (max-width: 600px) {
+    transform: scale(0.45);
+    right: 30px;
+    top: -30px;
+    min-height: 235px;
+
+    .top-logo-wrapper {
+      top: -100px;
+    }
+  }
 }
 </style>
 <script>

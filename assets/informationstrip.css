@@ -1,14 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap');
-.primary-dark-bg{
-  background-color: #0C1831;
+.primary-dark-bg {
+  background-color: #0c1831;
 }
-.cause-rating-strip .v-rating .v-icon{
+.cause-rating-strip .v-rating .v-icon {
   padding: 0rem;
 }
-.strip-info{
+.strip-info {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   letter-spacing: 0.24px;
   /* line-height: 19px; */
   font-weight: 400;
+}
+@media screen and (max-width: 600px) {
+  .cause-rating-strip .v-rating .v-icon {
+    font-size: 14px !important;
+    margin-left: 5px;
+  }
+  .strip-info {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    line-height: 16px;
+  }
+  .cause-rating-strip .v-rating {
+    line-height: 14px;
+  }
 }

@@ -22,7 +22,7 @@ export const Default = Template.bind({})
 Default.args = {
   message: 'Be the first one to know when the Cause Button launches!',
   label: "Email me when it's ready",
-  icon: 'mdi-heart',
+  icon: 'mdi mdi-heart',
 }
 
 const SuccessPopup = (args, { argTypes }) => ({
@@ -35,5 +35,5 @@ export const SuccessMessage = SuccessPopup.bind({})
 SuccessMessage.args = {
   message: 'Big success message!',
   label: 'Email added!',
-  icon: 'mdi-heart',
+  icon: 'mdi mdi-heart',
 }

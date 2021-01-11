@@ -10,7 +10,7 @@
           readonly="true"
           value="5"
         ></v-rating>
-        <span class="white--text pl-4 strip-info">10,321</span>
+        <span class="white--text pl-sm-4 pl-1 strip-info">10,321</span>
         <span class="white--text pl-2 pr-2 strip-info">|</span>
         <span class="white--text strip-info">Charity</span>
         <span class="white--text pl-2 pr-2 strip-info">|</span>

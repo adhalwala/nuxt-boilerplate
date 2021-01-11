@@ -2,7 +2,7 @@
   <div class="">
     <div class="gridContainer d-flex align-self-center">
       <div
-        class="containerOneChildOne col-7 text-left align-self-center pr-15 pl-0"
+        class="containerOneChildOne col-12 col-sm-7 text-left align-self-center pr-15 pl-0"
       >
         <div class="imgContainer">
           <img
@@ -12,7 +12,9 @@
           />
         </div>
       </div>
-      <div class="containerOneChildTwo col-5 text-left align-self-center">
+      <div
+        class="containerOneChildTwo col-12 col-sm-5 text-left align-self-center"
+      >
         <h2 class="HowItWorks">How it Works ?</h2>
 
         <div class="liwrapper">

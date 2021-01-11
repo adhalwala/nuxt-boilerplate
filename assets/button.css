@@ -47,3 +47,17 @@
 .banner-btn .v-icon {
   color: #ffffff;
 }
+@media screen and (max-width: 600px) {
+  .v-application .primary-theme {
+    font-size: 18px;
+    height: 40px !important;
+    padding: 0 38px !important;
+  }
+  .primary-theme i {
+    font-size: 20px !important;
+    margin-right: 5px;
+    position: absolute;
+    left: 7px;
+    top: 8px;
+  }
+}

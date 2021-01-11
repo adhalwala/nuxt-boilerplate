@@ -22,7 +22,7 @@
     </div>
     <information-strip />
     <howit-works class="mt-10" />
-    <div class="bg-primary">
+    <div class="bg-primary mb-sm-0 mb-15">
       <v-container>
         <v-row>
           <logos-showcase
@@ -57,18 +57,18 @@
         </v-row>
       </v-container>
     </div>
-    <div class="bg-primary">
+    <div class="bg-primary show-case-right-left">
       <v-container>
-        <v-row>
-          <v-col class="d-flex col-7 text-center">
-            <showcase-images />
-          </v-col>
+        <v-row class="flex-sm-row-reverse">
           <logos-showcase
-            class="col-5 pl-15"
+            class="col-sm-5 col-6"
             title="Thousands of charities"
             text="There are over 57,000 charities on Cause. All registered and independently verified."
             label="Explore stores"
           />
+          <v-col class="d-flex text-center">
+            <showcase-images />
+          </v-col>
         </v-row>
       </v-container>
     </div>
@@ -81,7 +81,7 @@
     </div>
     <div class="primary-dark-bg counter-main-wrapper">
       <v-container>
-        <v-row no-gutters style="flex-wrap: nowrap">
+        <v-row no-gutters>
           <counter
             class="col-4"
             number="$44.72"
@@ -104,13 +104,13 @@
         </span>
       </v-container>
     </div>
-    <div class="pt-15 pb-15 mb-10">
+    <div class="pt-3 pb-3 pb-sm-15 pt-sm-15 mb-2 mb-sm-10">
       <h3 class="text-center free-text-lable">
         Add The Cause Button Now.
         <br />
         <span>It’s Free.</span>
       </h3>
-      <div class="mt-15">
+      <div class="mt-sm-15 mt-3">
         <v-row>
           <c-card
             topimg="/cause-logo.svg"
@@ -142,7 +142,7 @@
           />
         </v-row>
         <my-button
-          class="mt-15"
+          class="mt-8 mt-sm-15"
           label="Add the button to chrome"
           icon="mdi mdi-heart"
         />
@@ -163,6 +163,20 @@
 .counter-main-wrapper {
   padding-top: 100px;
 }
+.counter-bottom-line {
+  color: #a5d6fe;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  padding-top: 75px;
+  padding-bottom: 20px;
+  justify-content: center;
+}
 .free-text-lable {
   color: #3c76a6;
   font-family: Roboto;
@@ -173,6 +187,35 @@
   text-align: center;
   span {
     color: #0c1831;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .show-case-right-left .logos-showcase-images {
+    left: -150px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .charity-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .counter-main-wrapper {
+    padding-top: 20px;
+  }
+  .counter-bottom-line {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    line-height: 21px;
+    padding-top: 35px;
+  }
+  .footer-wrapper {
+    margin-top: 90px !important;
   }
 }
 </style>

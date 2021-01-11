@@ -1,6 +1,6 @@
 <template>
   <div class="banner-slider">
-    <div style="width: 500px; position: relative">
+    <div style="width: auto; position: relative">
       <!-- <div class="heart-border"></div> -->
       <v-carousel
         class="heart-slider"
@@ -56,6 +56,21 @@
     clip-path: url(#mask);
     height: 200px;
     width: 500px;
+  }
+  @media screen and (max-width: 600px) {
+    .heart-slider {
+      width: 250px;
+      height: 250px !important;
+      right: -45px;
+    }
+    .slider-top-img {
+      width: 70px;
+      height: 70px;
+      top: auto;
+      right: auto;
+      bottom: 50px;
+      left: 80px;
+    }
   }
 }
 </style>
