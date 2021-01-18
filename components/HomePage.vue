@@ -13,7 +13,7 @@
             <banner
               class="col-12 col-sm-6 left-side-home mt-4 mt-sm-0"
               bannertitle="Plant a tree"
-              bannersubtitle="When you shop online"
+              bannersubtitle="when you shop online"
               icon="mdi mdi-heart"
               label="Add The Button to Chrome"
             />

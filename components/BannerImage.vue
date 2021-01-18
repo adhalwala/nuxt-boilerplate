@@ -1,6 +1,6 @@
 <template>
   <div class="banner-slider">
-    <div style="width: auto; position: relative">
+    <div style="width: auto; position: relative; margin-left: auto">
       <!-- <div class="heart-border"></div> -->
       <v-carousel
         class="heart-slider"
@@ -40,6 +40,9 @@
 <style lang="scss" scoped>
 .banner-slider {
   position: relative;
+  svg {
+    position: absolute;
+  }
   .slider-top-img {
     height: 125px;
     width: 125px;
@@ -80,7 +83,8 @@
       width: 70px;
       height: 70px;
       top: auto;
-      right: auto;
+      left: auto;
+
       bottom: 25px;
       right: 80px;
     }

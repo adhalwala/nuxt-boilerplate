@@ -19,9 +19,15 @@
       </v-carousel-item>
     </v-carousel>
     <v-col class="col-12 text-center testimonial-number mt-15">
-      <v-icon class="mr-3" @click="model--"> mdi-chevron-left </v-icon>
-      <span class="bold black-color">{{ model + 1 }}/</span>{{ items.length }}
-      <v-icon class="ml-3" @click="model++"> mdi-chevron-right </v-icon>
+      <i
+        class="mr-3 mdi mdi-chevron-left testimonial-arrow"
+        @click="model--"
+      ></i>
+      <span class="bold black-color">{{ model + 1 }} / </span>{{ items.length }}
+      <i
+        class="ml-3 mdi mdi-chevron-right testimonial-arrow"
+        @click="model++"
+      ></i>
     </v-col>
   </v-main>
 </template>
@@ -67,6 +73,31 @@
     img {
       height: 150px;
       width: 150px;
+    }
+  }
+  .testimonial-arrow {
+    align-items: center;
+    display: inline-flex;
+    font-feature-settings: 'liga';
+    font-size: 26px;
+    justify-content: center;
+    letter-spacing: normal;
+    line-height: 1;
+    position: relative;
+    text-indent: 0;
+    margin-top: 0px;
+    transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), visibility 0s;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+      background-color: transparent;
+      color: #0c1831;
+      opacity: 1;
     }
   }
   @media screen and (max-width: 600px) {

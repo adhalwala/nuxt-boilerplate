@@ -28,7 +28,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['@/assets/fonts.css', '@/assets/storybook.scss'],
+  css: ['@/assets/fonts.css', '@/assets/storybook.scss','@/assets/custome.scss'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: ['@/plugins/vuetify.js'],

@@ -174,6 +174,7 @@
 <script>
 export default {
   name: 'HowitWorks',
+
   props: {
     title: String,
     description: String,
