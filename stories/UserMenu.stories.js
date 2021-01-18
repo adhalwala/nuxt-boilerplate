@@ -4,6 +4,7 @@ import SiteMenu from '~/components/SiteMenu.vue'
 export default {
   title: 'Example/UserMenu',
   component: UserMenu,
+
   SiteMenu,
   decorators: [
     () => ({

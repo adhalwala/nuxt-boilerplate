@@ -3,11 +3,11 @@ import HowitWorks from '~/components/HowitWorks.vue'
 export default {
   title: 'Example/HowitWork',
   component: HowitWorks,
-  decorators: [
-    () => ({
-      template: '<v-app><v-main><story /></v-main></v-app>',
-    }),
-  ],
+  // decorators: [
+  //   () => ({
+  //     template: '<v-app><v-main><story /></v-main></v-app>',
+  //   }),
+  // ],
 }
 
 const Template = (args, { argTypes }) => ({
