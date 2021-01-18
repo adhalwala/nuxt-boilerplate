@@ -61,15 +61,28 @@
     .heart-slider {
       width: 250px;
       height: 250px !important;
-      right: -45px;
+      right: -10px;
+    }
+    .slider-top-img {
+      width: 70px;
+      height: 70px;
+      top: auto;
+      bottom: 25px;
+      right: auto;
+      left: 40px;
+    }
+  }
+  @media screen and (max-width: 599px) {
+    .heart-slider {
+      right: -70px;
     }
     .slider-top-img {
       width: 70px;
       height: 70px;
       top: auto;
       right: auto;
-      bottom: 50px;
-      left: 80px;
+      bottom: 25px;
+      right: 80px;
     }
   }
 }

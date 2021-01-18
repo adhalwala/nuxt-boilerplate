@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="6" sm="6" md="3" lg="3" xl="3" class="cta--wrapper">
+  <v-col cols="6" sm="6" md="4" lg="3" xl="3" class="cta--wrapper">
     <div class="cta--block">
       <div class="cta-img-wrapper">
         <div class="top-img text-center">

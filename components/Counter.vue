@@ -1,7 +1,7 @@
 <template>
   <v-col
     cols="12"
-    sm="4"
+    md="4"
     class="flex-grow-1 text-center counter-wrape counter-text-wrapper"
   >
     <v-card class="pa-2" dark>

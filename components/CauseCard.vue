@@ -1,5 +1,5 @@
 <template>
-  <v-col class="col-12 col-sm-4 text-center cause-card">
+  <v-col class="col-12 col-lg-4 text-center cause-card">
     <v-card class="pa-2 d-flex row text-center" dark>
       <div class="text-center col-12">
         <img :src="imgsrc" />

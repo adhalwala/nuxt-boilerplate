@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex logos-showcase banner-wrapper">
-    <v-col class="col-6 text-left d-flex">
-      <div class="align-self-center">
+    <v-col class="text-left d-flex">
+      <div class="align-self-center width-full">
         <h2>{{ bannertitle }}</h2>
         <h3>{{ bannersubtitle }}</h3>
         <p>
@@ -24,16 +24,16 @@
   h2 {
     color: #3c76a6;
     font-family: Roboto;
+    font-weight: 600;
     font-size: 60px;
-    font-weight: bold;
     letter-spacing: 0;
     line-height: 53px;
   }
   h3 {
     color: #0c1831;
     font-family: Roboto;
-    font-size: 36px;
     font-weight: 500;
+    font-size: 36px;
     letter-spacing: 0.5px;
     line-height: 55px;
   }
@@ -56,12 +56,14 @@
       font-weight: 600;
       letter-spacing: 0;
       line-height: 29px;
+      font-family: 'Calibre';
     }
     h3 {
       font-size: 24px;
       font-weight: 600;
       letter-spacing: 0;
       line-height: 29px;
+      font-family: Calibre;
     }
     p {
       font-size: 16px;

@@ -1,8 +1,11 @@
 <template>
   <div class="">
-    <div class="gridContainer d-flex align-self-center">
+    <h2 class="HowItWorks d-md-none d-block pl-5 pr-5 text-center">
+      How it Works ?
+    </h2>
+    <div class="gridContainer d-md-flex d-inline-block align-self-center">
       <div
-        class="containerOneChildOne col-12 col-sm-7 text-left align-self-center pr-15 pl-0"
+        class="containerOneChildOne col-12 col-md-7 text-left align-self-center pr-sm-15 pr-0 pl-0"
       >
         <div class="imgContainer">
           <img
@@ -13,9 +16,9 @@
         </div>
       </div>
       <div
-        class="containerOneChildTwo col-12 col-sm-5 text-left align-self-center"
+        class="containerOneChildTwo col-12 col-md-5 text-left align-self-center"
       >
-        <h2 class="HowItWorks">How it Works ?</h2>
+        <h2 class="HowItWorks d-md-block d-none">How it Works ?</h2>
 
         <div class="liwrapper">
           <div id="imageONE" class="left_border liBgActive">
@@ -40,7 +43,7 @@
 </template>
 <style lang="scss" scoped>
 .HowItWorks {
-  text-align: center;
+  text-align: left;
   margin-top: 20px;
   color: #0c1831;
   font-family: Roboto;
@@ -49,6 +52,15 @@
   letter-spacing: 0.5px;
   line-height: 45px;
   margin-bottom: 42px;
+  @media screen and (max-width: 600px) {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.31px;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
 }
 
 .gridContainer {

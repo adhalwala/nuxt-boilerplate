@@ -1,14 +1,12 @@
 <template>
-  <div class="text-center">
-    <div>
-      <button
-        type="button banner-btn"
-        class="v-btn v-btn--contained v-btn--rounded v-size--default primary-theme"
-      >
-        <i style="font-size: 24px; margin-right: 5px" :class="icon"></i
-        >{{ label }}
-      </button>
-    </div>
+  <div class="text-center c-primary-btn">
+    <button
+      type="button"
+      class="v-btn banner-btn v-btn--contained v-btn--rounded v-size--default primary-theme"
+    >
+      <i style="font-size: 24px; margin-right: 5px" :class="icon"></i
+      >{{ label }}
+    </button>
   </div>
 </template>
 <style lang="scss" scoped>

@@ -14,8 +14,9 @@
 }
 @media screen and (max-width: 600px) {
   .cause-rating-strip .v-rating .v-icon {
-    font-size: 14px !important;
-    margin-left: 5px;
+    font-size: 16px !important;
+    margin-right: 3px;
+    margin-left: 0px;
   }
   .strip-info {
     font-size: 14px;

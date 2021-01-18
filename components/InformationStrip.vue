@@ -1,7 +1,7 @@
 <template>
   <v-main class="primary-dark-bg cause-rating-strip">
     <v-container>
-      <div class="text-center d-flex">
+      <div class="text-center d-flex col-12 pt-0 pb-0">
         <v-rating
           class="white--text"
           color="white"

@@ -3,24 +3,26 @@
     <div class="home-page">
       <v-container>
         <v-row>
-          <div class="d-flex col-12">
-            <div class="col-6">
+          <div class="d-flex col-12 pt-1 pt-sm-2 align-center">
+            <div class="col-6 pt-0 pt-sm-2">
               <logo class="" :width="width" />
             </div>
-            <usermenu class="col-6" />
+            <usermenu class="col-6 pt-0 pt-sm-2" />
           </div>
-          <banner
-            class="col-6"
-            bannertitle="Plant a tree"
-            bannersubtitle="When you shop online"
-            icon="mdi mdi-heart"
-            label="Add The Button to Chrome"
-          />
-          <banner-image class="col-6 d-flex" />
+          <div class="d-flex width-full">
+            <banner
+              class="col-12 col-sm-6 left-side-home mt-4 mt-sm-0"
+              bannertitle="Plant a tree"
+              bannersubtitle="When you shop online"
+              icon="mdi mdi-heart"
+              label="Add The Button to Chrome"
+            />
+            <banner-image class="col-6 d-flex" />
+          </div>
         </v-row>
       </v-container>
     </div>
-    <information-strip />
+    <information-strip class="col-12 pt-0 pb-0" />
     <howit-works class="mt-10" />
     <div class="bg-primary mb-sm-0 mb-15">
       <v-container>
@@ -59,9 +61,9 @@
     </div>
     <div class="bg-primary show-case-right-left">
       <v-container>
-        <v-row class="flex-sm-row-reverse">
+        <v-row class="flex-md-row-reverse">
           <logos-showcase
-            class="col-sm-5 col-6"
+            class="col-md-5 col-6"
             title="Thousands of charities"
             text="There are over 57,000 charities on Cause. All registered and independently verified."
             label="Explore stores"
@@ -194,9 +196,9 @@
     margin-top: 40px;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 1024px) and (min-width: 960px) {
   .show-case-right-left .logos-showcase-images {
-    left: -150px;
+    left: -170px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -204,22 +206,59 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
+  .banner-slider {
+    position: absolute;
+    right: 0;
+    top: 70px;
+  }
+  .site-logo {
+    width: 90px;
+  }
   .counter-main-wrapper {
     padding-top: 20px;
   }
+
   .counter-bottom-line {
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.2px;
     line-height: 21px;
     padding-top: 35px;
+    max-width: 400px;
+    margin: auto;
   }
   .footer-wrapper {
     margin-top: 90px !important;
   }
 }
 </style>
-
+<style>
+@media screen and (max-width: 959px) and (min-width: 600px) {
+  .logos-showcase-images {
+    right: auto !important;
+    left: -45px;
+  }
+  .show-case-right-left .logos-showcase-images {
+    left: -45px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .left-side-home .banner-btn,
+  .left-side-home .c-primary-btn {
+    width: 100%;
+  }
+  .left-side-home .c-primary-btn {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 960px) {
+  .banner-slider .heart-slider {
+    width: 400px !important;
+    height: 400px !important;
+  }
+}
+</style>
 <script>
 import Logo from '~/components/Logo.vue'
 import Usermenu from '~/components/UserMenu.vue'

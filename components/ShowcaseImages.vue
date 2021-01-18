@@ -261,7 +261,7 @@
   }
   @media screen and (max-width: 600px) {
     transform: scale(0.45);
-    right: 30px;
+    right: -5px;
     top: -30px;
     min-height: 235px;
 

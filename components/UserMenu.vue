@@ -14,6 +14,16 @@
     i {
       font-size: 24px !important;
     }
+    &.user-menu {
+      .primary-theme {
+        width: 86px;
+        i {
+          top: auto;
+          left: auto;
+          margin-right: 0px;
+        }
+      }
+    }
   }
 }
 </style>
