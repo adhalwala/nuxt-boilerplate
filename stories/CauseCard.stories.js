@@ -3,11 +3,11 @@ import CouseCard from '~/components/CauseCard.vue'
 export default {
   title: 'Example/CouseCard',
   component: CouseCard,
-  decorators: [
-    () => ({
-      template: '<v-app><v-main><story /></v-main></v-app>',
-    }),
-  ],
+  // decorators: [
+  //   () => ({
+  //     template: '<v-app><v-main><story /></v-main></v-app>',
+  //   }),
+  // ],
 }
 
 const Template = (args, { argTypes }) => ({

@@ -28,10 +28,10 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['@/assets/storybook.scss'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['@/plugins/vuetify.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -71,5 +71,9 @@ export default {
 
   storybook: {
     stories: ['~/stories/**/*.stories.js'],
+    decorators: [
+      // VApp decorator for Vuetify
+      `<v-app id='vuetify-storybook-decorator'><v-main><story/></v-main></v-app>`,
+    ],
   },
 }

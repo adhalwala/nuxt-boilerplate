@@ -1,0 +1,8 @@
+/* storybook.scss */
+
+#vuetify-storybook-decorator {
+  // Remove the storybook full height of all components
+  .v-application--wrap {
+    min-height: unset;
+  }
+}

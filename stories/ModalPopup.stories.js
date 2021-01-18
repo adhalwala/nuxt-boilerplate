@@ -5,11 +5,11 @@ export default {
   title: 'Example/Modal Popup',
   component: ModalPopup,
   ModalSuccess,
-  decorators: [
-    () => ({
-      template: '<v-app><v-main><story /></v-main></v-app>',
-    }),
-  ],
+  // decorators: [
+  //   () => ({
+  //     template: '<v-app><v-main><story /></v-main></v-app>',
+  //   }),
+  // ],
 }
 
 const Template = (args, { argTypes }) => ({

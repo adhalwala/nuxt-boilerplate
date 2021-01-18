@@ -9,11 +9,11 @@ export default {
       control: { type: 'select', options: ['small', 'medium', 'large'] },
     },
   },
-  decorators: [
-    () => ({
-      template: '<v-app><v-main><story /></v-main></v-app>',
-    }),
-  ],
+  // decorators: [
+  //   () => ({
+  //     template: '<v-app><v-main><story /></v-main></v-app>',
+  //   }),
+  // ],
 }
 
 const Template = (args, { argTypes }) => ({

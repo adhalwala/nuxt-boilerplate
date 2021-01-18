@@ -3,11 +3,11 @@ import ExploreButton from '~/components/ExploreButton.vue'
 export default {
   title: 'Example/ExploreButton',
   component: ExploreButton,
-  decorators: [
-    () => ({
-      template: '<v-app><v-main><story /></v-main></v-app>',
-    }),
-  ],
+  // decorators: [
+  //   () => ({
+  //     template: '<v-app><v-main><story /></v-main></v-app>',
+  //   }),
+  // ],
 }
 
 const Template = (args, { argTypes }) => ({
