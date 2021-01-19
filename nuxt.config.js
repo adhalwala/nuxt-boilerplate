@@ -73,7 +73,7 @@ export default {
     stories: ['~/stories/**/*.stories.js'],
     decorators: [
       // VApp decorator for Vuetify
-      `<v-app id='vuetify-storybook-decorator'><v-main><story/></v-main></v-app>`,
+      "<v-app id='vuetify-storybook-decorator'><v-main><story/></v-main></v-app>",
     ],
   },
 }

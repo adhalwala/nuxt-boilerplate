@@ -8,11 +8,16 @@
         class="containerOneChildOne col-12 col-md-7 text-left align-self-center pr-sm-15 pr-0 pl-0"
       >
         <div class="imgContainer">
-          <img
-            class="mockupImg"
-            src="https://images.unsplash.com/photo-1541096088083-65e23ee14e43?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-            alt="iphone mockup1"
-          />
+          <video
+            autoplay
+            loop=""
+            class="d-block"
+            id="myvid"
+            width="100%"
+            preload="auto"
+          >
+            <source src="/Cause-How-it-works-v-2.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
       <div
@@ -21,18 +26,30 @@
         <h2 class="HowItWorks d-md-block d-none">How it Works ?</h2>
 
         <div class="liwrapper">
-          <div id="imageONE" class="left_border liBgActive">
+          <div
+            id="imageONE"
+            :class="{ active: active_el === 1 }"
+            @click="skip(0, 1)"
+          >
             <h6>Add in seconds</h6>
             <p>Just two clicks to install. It’s 100% free.</p>
           </div>
-          <div id="imageTWO" class="left_border">
+          <div
+            id="imageTWO"
+            :class="{ active: active_el === 2 }"
+            @click="skip(4, 2)"
+          >
             <h6>Shop like normal</h6>
             <p>
               The Cause Button will appear when you visit a store offering free
               donations.
             </p>
           </div>
-          <div id="imageTHREE" class="left_border">
+          <div
+            id="imageTHREE"
+            :class="{ active: active_el === 3 }"
+            @click="skip(11, 3)"
+          >
             <h6>Raise money for charity</h6>
             <p>Just two clicks to install. It’s 100% free.</p>
           </div>
@@ -67,7 +84,13 @@
   // margin: 10px 30px;
   // display: grid;
   // grid-template-columns: 45% 55%;
-  min-height: 600px;
+  // min-height: 600px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @media screen and (max-width: 600px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .containerOneChildOne {
@@ -85,6 +108,9 @@
   // margin-left: 20px;
   // border-left: 2px solid #bdbdbd;
   border-left: 1px solid #151515;
+  > div {
+    cursor: pointer;
+  }
   h2 {
   }
   h6 {
@@ -112,7 +138,7 @@
     padding-left: 40px;
     padding-top: 15px;
 
-    &.liBgActive {
+    &.active {
       &:after {
         content: '';
         position: absolute;
@@ -135,6 +161,7 @@
 .imgContainer {
   transition: all 1s ease;
   height: 100%;
+  box-shadow: 0px 0px 50px 11px #ddd;
 }
 
 .banner-wrapper {
@@ -174,53 +201,42 @@
 <script>
 export default {
   name: 'HowitWorks',
-
+  data() {
+    return {
+      active_el: 1,
+    }
+  },
   props: {
     title: String,
     description: String,
   },
-  mounted() {
-    const node = document.querySelector('.liwrapper')
-    const img = document.querySelector('.mockupImg')
 
-    node.addEventListener('click', (e) => {
-      const k = e.target.parentNode.childNodes
-      const arr9 = Array.prototype.slice.call(k)
-      console.log(k)
-      arr9.forEach((element) => {
-        if (element.classList) {
-          element.classList.remove('liBgActive')
-        } else {
-        }
-      })
-
-      switch (e.target.id) {
-        case 'imageONE':
-          e.target.className = 'liBgActive'
-          img.src = 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
-
-          break
-
-        case 'imageTWO':
-          img.src = 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
-          e.target.className = 'liBgActive'
-          break
-
-        case 'imageTHREE':
-          img.src =
-            'https://images.unsplash.com/photo-1521547116720-6ccf948f63b9?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ'
-          e.target.className = 'liBgActive'
-          break
-
-        case 'imageFOUR':
-          img.src =
-            'https://images.unsplash.com/photo-1587813724049-6f728b259c17?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ'
-          e.target.className = 'liBgActive'
-          break
-
-        default:
-      }
-    })
+  // computed: {
+  //   active_el() {
+  //     const vid = document.getElementById('myvid')
+  //     if (vid) {
+  //       vid.ontimeupdate = function () {
+  //         if (vid.currentTime > 0 && vid.currentTime < 4) {
+  //           // console.log('sehjad')
+  //           return 1
+  //         } else if (vid.currentTime > 4 && vid.currentTime < 11) {
+  //           // console.log('ssss')
+  //           return 2
+  //         } else {
+  //           // console.log('sajju')
+  //           return 3
+  //         }
+  //       }
+  //     }
+  //     return 0
+  //   },
+  // },
+  methods: {
+    skip(value, el) {
+      const video = document.getElementById('myvid')
+      video.currentTime = value
+      this.active_el = el
+    },
   },
 }
 </script>
