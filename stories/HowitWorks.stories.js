@@ -1,7 +1,7 @@
 import HowitWorks from '~/components/HowitWorks.vue'
 
 export default {
-  title: 'Example/HowitWork',
+  title: 'Example/HowitWorks',
   component: HowitWorks,
   // decorators: [
   //   () => ({

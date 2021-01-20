@@ -21,6 +21,7 @@
   p {
     width: 425px;
     font-size: 16px;
+    font-weight: 300;
   }
   @media screen and (max-width: 600px) {
     padding-left: 30px;

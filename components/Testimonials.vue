@@ -73,6 +73,8 @@
     img {
       height: 150px;
       width: 150px;
+      object-fit: cover;
+      object-position: center center;
     }
   }
   .testimonial-arrow {
@@ -94,6 +96,7 @@
     user-select: none;
     opacity: 0.5;
     cursor: pointer;
+
     &:hover {
       background-color: transparent;
       color: #0c1831;
@@ -126,6 +129,11 @@
   font-weight: 300;
   letter-spacing: 0;
   line-height: 21px;
+  span {
+    font-weight: 500;
+    font-family: Roboto;
+    font-style: normal;
+  }
 }
 </style>
 <script>

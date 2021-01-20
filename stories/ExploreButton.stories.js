@@ -1,7 +1,7 @@
 import ExploreButton from '~/components/ExploreButton.vue'
 
 export default {
-  title: 'Example/ExploreButton',
+  title: 'Example/TextButton',
   component: ExploreButton,
   // decorators: [
   //   () => ({

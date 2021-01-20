@@ -101,6 +101,9 @@
       min-height: 40px;
       padding-bottom: 10px;
     }
+  }
+  .cta--block {
+    cursor: pointer;
     &:hover {
       i {
         background-color: #3c76a6;

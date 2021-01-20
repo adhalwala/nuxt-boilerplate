@@ -96,6 +96,11 @@
       transition: 0.2s;
       -webkit-transition: 0.2s;
     }
+    &:active {
+      transform: scale(1);
+      transition: 0.2s;
+      -webkit-transition: 0.2s;
+    }
     img {
       height: 100%;
       width: 100%;

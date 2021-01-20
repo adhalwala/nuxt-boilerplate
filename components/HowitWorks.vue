@@ -138,7 +138,8 @@
     padding-left: 40px;
     padding-top: 15px;
 
-    &.active {
+    &.active,
+    &:hover {
       &:after {
         content: '';
         position: absolute;

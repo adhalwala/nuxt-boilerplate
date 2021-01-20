@@ -1,7 +1,7 @@
 import MyButton from '~/components/Button.vue'
 
 export default {
-  title: 'Example/Button',
+  title: 'Example/Buttons',
   component: MyButton,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -22,8 +22,8 @@ const Template = (args, { argTypes }) => ({
   template: '<my-button v-bind="$props" />',
 })
 
-export const Primary = Template.bind({})
-Primary.args = {
+export const PrimaryPlusIcon = Template.bind({})
+PrimaryPlusIcon.args = {
   label: 'Add the button to chrome',
   icon: 'mdi mdi-heart',
 }

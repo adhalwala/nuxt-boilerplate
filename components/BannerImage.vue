@@ -12,8 +12,11 @@
           v-for="(item, i) in items"
           :key="i"
           :src="item.src"
+          reverse-transition="slide-fade"
+          transition="slide-fade"
         ></v-carousel-item>
       </v-carousel>
+
       <img class="slider-top-img" src="/cause-logo.svg" />
     </div>
     <svg>
