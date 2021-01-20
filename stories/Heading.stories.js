@@ -3,7 +3,7 @@ import HeadingH1Alt from '~/components/HeadingH1Alt.vue'
 import HeadingH2 from '~/components/HeadingH2.vue'
 import HeadingH3 from '~/components/HeadingH3.vue'
 import HeadingH4link from '~/components/HeadingH4link.vue'
-import Paragraph from '~/components/paragraph.vue'
+import Paragraph from '~/components/Paragraph.vue'
 
 export default {
   title: 'Example/Heading',
@@ -48,7 +48,7 @@ const HeadingH4Link = (args, { argTypes }) => ({
 })
 const ParagraphTag = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { ParagraphTag },
+  components: { Paragraph },
   template: '<paragraph />',
 })
 

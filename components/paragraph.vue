@@ -10,29 +10,14 @@
 }
 </style>
 <script>
-import paragraph from '~/components/paragraph.vue'
 export default {
-  name: 'paragraph',
-  component: paragraph,
-  decorators: [
-    () => ({
-      template: '<v-app><v-main><story /></v-main></v-app>',
-    }),
-  ],
+  name: 'Paragraph',
+
   props: {
     text: {
       type: String,
       default: 'Paragraph Text',
     },
   },
-}
-const Template = (args, { argTypes }) => ({
-  props: Object.keys(argTypes),
-  components: { paragraph },
-  template: '<paragraph v-bind="$props" />',
-})
-export const p = Template.bind({})
-p.args = {
-  text: '',
 }
 </script>

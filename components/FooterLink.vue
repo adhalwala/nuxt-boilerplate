@@ -33,7 +33,10 @@
 export default {
   name: 'FooterLink',
   props: {
-    linktext: String,
+    linktext: {
+      default: '',
+      type: String,
+    },
   },
 }
 </script>

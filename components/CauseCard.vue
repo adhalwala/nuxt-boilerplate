@@ -119,9 +119,18 @@ export default {
   name: 'CouseCard',
 
   props: {
-    imgsrc: String,
-    title: String,
-    description: String,
+    imgsrc: {
+      default: '',
+      type: String,
+    },
+    title: {
+      default: '',
+      type: String,
+    },
+    description: {
+      default: '',
+      type: String,
+    },
   },
 }
 </script>

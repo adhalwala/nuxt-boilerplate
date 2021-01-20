@@ -62,21 +62,18 @@ export default {
   props: {
     user: {
       type: Object,
-      // default: () => ({}),
+      default: () => ({}),
     },
   },
 
   methods: {
     onLogin() {
-      console.log('onLogin')
       this.$emit('onLogin')
     },
     onLogout() {
-      console.log('onLogout')
       this.$emit('onLogout')
     },
     onCreateAccount() {
-      console.log('onCreateAccount')
       this.$emit('onCreateAccount')
     },
   },

@@ -31,11 +31,12 @@
 import '~/assets/usermenu.css'
 
 export default {
-  name: 'Usermenu',
+  name: 'UserMenu',
 
   props: {
     label: {
       type: String,
+      default: '',
     },
     primary: {
       type: Boolean,

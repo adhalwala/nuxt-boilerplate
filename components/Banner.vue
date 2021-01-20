@@ -85,10 +85,22 @@ export default {
   name: 'Banner',
   components: { MyButton },
   props: {
-    label: String,
-    icon: String,
-    bannertitle: String,
-    bannersubtitle: String,
+    label: {
+      default: '',
+      type: String,
+    },
+    icon: {
+      default: '',
+      type: String,
+    },
+    bannertitle: {
+      default: '',
+      type: String,
+    },
+    bannersubtitle: {
+      default: '',
+      type: String,
+    },
   },
 }
 </script>
