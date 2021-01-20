@@ -9,15 +9,9 @@
 }
 </style>
 <script>
-import HeadingH1Alt from '~/components/HeadingH1Alt.vue'
 export default {
   name: 'HeadingH1Alt',
-  component: HeadingH1Alt,
-  decorators: [
-    () => ({
-      template: '<v-app><v-main><story /></v-main></v-app>',
-    }),
-  ],
+
   props: {
     text: {
       type: String,
@@ -33,14 +27,5 @@ export default {
       default: '',
     },
   },
-}
-const Template = (args, { argTypes }) => ({
-  props: Object.keys(argTypes),
-  components: { HeadingH1Alt },
-  template: '<heading-h1-alt v-bind="$props" />',
-})
-export const H1Alt = Template.bind({})
-H1Alt.args = {
-  text: 'Button',
 }
 </script>

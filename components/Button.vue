@@ -19,20 +19,15 @@
 </style>
 <script>
 import '~/assets/button.css'
-import MyButton from '~/components/Button.vue'
 export default {
   name: 'MyButton',
-  component: MyButton,
-  decorators: [
-    () => ({
-      template: '<v-app><v-main><story /></v-main></v-app>',
-    }),
-  ],
   props: {
     label: {
+      default: '',
       type: String,
     },
     icon: {
+      default: '',
       type: String,
     },
     size: {
@@ -69,15 +64,5 @@ export default {
       this.$emit('onClick')
     },
   },
-}
-const Template = (args, { argTypes }) => ({
-  props: Object.keys(argTypes),
-  components: { MyButton },
-  template: '<my-button v-bind="$props" />',
-})
-export const button = Template.bind({})
-button.args = {
-  icon: '',
-  label: '',
 }
 </script>

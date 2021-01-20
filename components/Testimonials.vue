@@ -1,10 +1,10 @@
 <template>
   <v-main class="logos-showcase testimonials">
     <v-carousel
+      v-model="model"
       height="auto"
       :show-arrows="false"
       hide-delimiters
-      v-model="model"
     >
       <v-carousel-item v-for="(item, i) in items" :key="i">
         <v-col class="col-12 text-center">
@@ -38,9 +38,6 @@
   h3,
   p {
     color: #0c1831;
-  }
-  p {
-    // width: 425px;
   }
 }
 .testimonials {

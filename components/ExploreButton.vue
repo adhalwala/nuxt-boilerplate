@@ -35,29 +35,14 @@
 }
 </style>
 <script>
-import ExploreButton from '~/components/ExploreButton.vue'
 export default {
   name: 'ExploreButton',
-  component: ExploreButton,
-  decorators: [
-    () => ({
-      template: '<v-app><v-main><story /></v-main></v-app>',
-    }),
-  ],
+
   props: {
     label: {
       type: String,
       default: '',
     },
   },
-}
-const Template = (args, { argTypes }) => ({
-  props: Object.keys(argTypes),
-  components: { ExploreButton },
-  template: '<explore-button v-bind="$props" />',
-})
-export const Ebutton = Template.bind({})
-Ebutton.args = {
-  label: '',
 }
 </script>

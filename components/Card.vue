@@ -133,11 +133,26 @@
 export default {
   name: 'Card',
   props: {
-    topimg: String,
-    title: String,
-    imgsrc: String,
-    icon: String,
-    description: String,
+    topimg: {
+      default: '',
+      type: String,
+    },
+    title: {
+      default: '',
+      type: String,
+    },
+    imgsrc: {
+      default: '',
+      type: String,
+    },
+    icon: {
+      default: '',
+      type: String,
+    },
+    description: {
+      default: '',
+      type: String,
+    },
   },
 }
 </script>

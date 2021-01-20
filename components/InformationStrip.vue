@@ -9,8 +9,8 @@
           color="white"
           length="5"
           size="20"
-          readonly="true"
-          value="5"
+          :readonly="true"
+          :value="5"
         ></v-rating>
         <span class="white--text pl-sm-4 pl-1 strip-info">10,321</span>
         <span class="white--text pl-1 pr-1 pl-sm-2 pr-sm-2 strip-info">|</span>
@@ -31,6 +31,7 @@ export default {
   props: {
     label: {
       type: String,
+      default: '',
     },
     primary: {
       type: Boolean,

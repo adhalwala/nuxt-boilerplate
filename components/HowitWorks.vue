@@ -9,12 +9,14 @@
       >
         <div class="imgContainer">
           <video
+            id="myvid"
+            ref="vidBlock"
             autoplay
             loop=""
             class="d-block"
-            id="myvid"
             width="100%"
             preload="auto"
+            @timeupdate="onTimeUpdateListener"
           >
             <source src="/Cause-How-it-works-v-2.mp4" type="video/mp4" />
           </video>
@@ -202,41 +204,37 @@
 <script>
 export default {
   name: 'HowitWorks',
+  props: {
+    title: {
+      type: String,
+      default: '',
+    },
+    description: {
+      type: String,
+      default: '',
+    },
+  },
   data() {
     return {
       active_el: 1,
+      videoTime: 0,
     }
   },
-  props: {
-    title: String,
-    description: String,
-  },
-
-  // computed: {
-  //   active_el() {
-  //     const vid = document.getElementById('myvid')
-  //     if (vid) {
-  //       vid.ontimeupdate = function () {
-  //         if (vid.currentTime > 0 && vid.currentTime < 4) {
-  //           // console.log('sehjad')
-  //           return 1
-  //         } else if (vid.currentTime > 4 && vid.currentTime < 11) {
-  //           // console.log('ssss')
-  //           return 2
-  //         } else {
-  //           // console.log('sajju')
-  //           return 3
-  //         }
-  //       }
-  //     }
-  //     return 0
-  //   },
-  // },
   methods: {
     skip(value, el) {
-      const video = document.getElementById('myvid')
+      const video = this.$refs.vidBlock
       video.currentTime = value
       this.active_el = el
+    },
+    onTimeUpdateListener(element) {
+      this.videoTime = element.srcElement.currentTime
+      if (this.videoTime > 0 && this.videoTime < 4) {
+        this.active_el = 1
+      } else if (this.videoTime > 4 && this.videoTime < 11) {
+        this.active_el = 2
+      } else {
+        this.active_el = 3
+      }
     },
   },
 }

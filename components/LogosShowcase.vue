@@ -47,7 +47,7 @@
 </style>
 <script>
 import HeadingH3 from '~/components/HeadingH3.vue'
-import Paragraph from '~/components/paragraph.vue'
+import Paragraph from '~/components/Paragraph.vue'
 // import ShowcaseImages from '~/components/ShowcaseImages.vue'
 export default {
   name: 'LogosShowcase',

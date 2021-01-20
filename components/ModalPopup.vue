@@ -96,13 +96,22 @@ import MyButton from '~/components/Button.vue'
 export default {
   name: 'Modalpopup',
   components: { MyButton },
+  props: {
+    message: {
+      type: String,
+      default: '',
+    },
+    label: {
+      type: String,
+      default: '',
+    },
+    icon: {
+      type: String,
+      default: '',
+    },
+  },
   data: () => ({
     dialog: false,
   }),
-  props: {
-    message: String,
-    label: String,
-    icon: String,
-  },
 }
 </script>

@@ -1,20 +1,22 @@
 <template>
-  <h3 class="c-heading black--text">{{ text }}</h3>
+  <p class="c-heading black--text">{{ text }}</p>
 </template>
 <style scoped>
 .c-heading {
   font-family: Roboto;
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 100;
 }
 </style>
 <script>
 export default {
-  name: 'HeadingH3',
+  name: 'Paragraph',
+
   props: {
     text: {
       type: String,
-      default: 'Heading H3',
+      default: 'Paragraph Text',
     },
   },
 }

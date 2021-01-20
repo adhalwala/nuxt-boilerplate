@@ -16,7 +16,10 @@
 export default {
   name: 'FooterCopyright',
   props: {
-    text: String,
+    text: {
+      default: '',
+      type: String,
+    },
   },
 }
 </script>

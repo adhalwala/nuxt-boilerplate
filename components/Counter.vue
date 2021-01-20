@@ -91,9 +91,18 @@ export default {
   name: 'Counter',
 
   props: {
-    number: String,
-    description: String,
-    bottomtext: String,
+    number: {
+      default: '',
+      type: String,
+    },
+    description: {
+      default: '',
+      type: String,
+    },
+    bottomtext: {
+      default: '',
+      type: String,
+    },
   },
 }
 </script>
