@@ -1,7 +1,17 @@
 <template>
-  <v-col class="col-12 col-lg-4 text-center cause-card">
+  <v-col class="col-12 col-md-4 text-center cause-card">
     <v-card class="pa-2 d-flex row text-center" dark>
-      <div class="text-center col-12">
+      <div
+        class="text-center col-12"
+        data-aos="fade-in"
+        data-aos-offset="10"
+        data-aos-delay="30"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        data-aos-anchor-placement="top-center"
+      >
         <img :src="imgsrc" />
       </div>
       <h3>{{ title }}</h3>
@@ -45,6 +55,9 @@
   width: 100%;
   justify-content: center;
   margin-top: 25px;
+  max-width: 332px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .counter-wrape .border-left {
   border-left: 2px solid #a5d6fe;
@@ -115,9 +128,13 @@
 }
 </style>
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 export default {
   name: 'CouseCard',
-
+  created() {
+    AOS.init()
+  },
   props: {
     imgsrc: {
       default: '',

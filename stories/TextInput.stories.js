@@ -1,8 +1,8 @@
-import HomePage from '~/components/HomePage'
+import TextInput from '~/components/TextInput.vue'
 
 export default {
-  title: 'Layouts/HomePage',
-  component: HomePage,
+  title: 'Components/Text Input',
+  component: TextInput,
   // decorators: [
   //   () => ({
   //     template: '<v-app><v-main><story /></v-main></v-app>',
@@ -12,8 +12,11 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { HomePage },
-  template: '<home-page />',
+  components: { TextInput },
+  template: '<text-input v-bind="$props" />',
 })
+
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {
+  label: 'Email*',
+}

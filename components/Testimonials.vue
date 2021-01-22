@@ -70,8 +70,8 @@
     img {
       height: 150px;
       width: 150px;
-      object-fit: cover;
-      object-position: center center;
+      // object-fit: cover;
+      // object-position: center center;
     }
   }
   .testimonial-arrow {

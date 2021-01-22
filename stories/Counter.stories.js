@@ -1,7 +1,7 @@
 import Counter from '~/components/Counter.vue'
 
 export default {
-  title: 'Example/Counter',
+  title: 'Components/Counter',
   component: Counter,
   // decorators: [
   //   () => ({

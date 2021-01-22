@@ -17,6 +17,7 @@
     &.user-menu {
       .primary-theme {
         width: 86px;
+        height: 34px !important;
         i {
           top: auto;
           left: auto;

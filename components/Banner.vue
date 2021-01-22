@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex logos-showcase banner-wrapper">
+  <div class="d-flex banner-wrapper">
     <v-col class="text-left d-flex">
       <div class="align-self-center width-full">
         <h2>{{ bannertitle }}</h2>
@@ -11,7 +11,7 @@
         <my-button
           :icon="icon"
           :label="label"
-          class="text-left float-left mb-5 mb-sm-0"
+          class="text-left banner-btn float-left mb-5 mb-sm-0"
         />
       </div>
     </v-col>

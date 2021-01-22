@@ -8,7 +8,7 @@
         <img :src="imgsrc" />
         <span>{{ title }}</span>
       </div>
-      <div class="cta--action d-none d-sm-flex">
+      <div class="cta--action" v-ripple>
         <v-icon left class="cta-link-icon"> {{ icon }} </v-icon>
         <span class="d-flex">{{ description }}</span>
       </div>
@@ -32,6 +32,7 @@
       object-fit: cover;
       object-position: center center;
       height: 300px;
+      display: block;
     }
     span {
       color: #ffffff;
@@ -75,7 +76,8 @@
     position: relative;
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: 7px;
+    padding-top: 10px;
+    height: 100%;
     i {
       color: #3c76a6;
       border: 1px solid #3c76a6;
@@ -87,7 +89,7 @@
       line-height: 32px;
       position: absolute;
       left: 10px;
-      top: 0;
+      top: 10px;
     }
     span {
       color: #3c76a6;
@@ -101,8 +103,12 @@
       min-height: 40px;
       padding-bottom: 10px;
     }
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
   .cta--block {
+    overflow: hidden;
     cursor: pointer;
     &:hover {
       i {
@@ -112,12 +118,12 @@
     }
   }
   @media screen and (max-width: 600px) {
-    padding-left: 7px;
-    padding-right: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 0px;
-    padding-top: 5px;
+    padding-top: 20px;
     .cta-img-wrapper > img {
-      height: 180px;
+      height: 210px;
     }
     .cta-img-wrapper .top-img {
       height: 40px;
@@ -126,6 +132,16 @@
         width: 100%;
       }
     }
+  }
+  @media screen and (max-width: 500px) {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 0px;
+    padding-top: 14px;
+  }
+  @media screen and (max-width: 1224px) and (min-width: 960px) {
+    display: inline-block;
+    float: none;
   }
 }
 </style>

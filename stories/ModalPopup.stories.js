@@ -2,7 +2,7 @@ import ModalPopup from '~/components/ModalPopup.vue'
 import ModalSuccess from '~/components/SuccessMessage.vue'
 
 export default {
-  title: 'Example/Modal Popup',
+  title: 'Components/Modal Popup',
   component: ModalPopup,
   ModalSuccess,
   // decorators: [

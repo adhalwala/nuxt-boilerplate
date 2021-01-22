@@ -1,12 +1,5 @@
 <template>
   <article>
-    <my-header
-      :user="user"
-      @onLogin="onLogin"
-      @onLogout="onLogout"
-      @onCreateAccount="onCreateAccount"
-    />
-
     <section>
       <h2>Pages in Storybook</h2>
       <p>
@@ -77,12 +70,9 @@
 
 <script>
 import '~/assets/page.css'
-import MyHeader from '~/components/Header.vue'
 
 export default {
   name: 'MyPage',
-
-  components: { MyHeader },
 
   props: {
     user: {

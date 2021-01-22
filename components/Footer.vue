@@ -1,30 +1,34 @@
 <template>
   <footer class="footer-wrapper">
-    <div class="d-flex footer-link">
-      <div class="col-12 text-left">
-        <ul class="align-self-center">
-          <li>Support</li>
-          <li>Contact us</li>
-          <li>Privacy Policy</li>
-          <li>Terms & Conditions</li>
-          <li>About Us</li>
-        </ul>
+    <div class="container">
+      <div class="row">
+        <div class="d-flex footer-link ml-auto mr-auto">
+          <div class="col-12 text-left">
+            <ul class="align-self-center">
+              <li>Support</li>
+              <li>Contact us</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+              <li>About Us</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tag-line">
+          We are a for-purpose social enterprise<br />
+          Made with <i class="mdi mdi-heart"></i> Melbourne
+        </div>
+        <div class="d-flex col-12 footer-social">
+          <ul class="align-self-center">
+            <li><img src="/facebook.svg" /></li>
+            <li><img src="/twitter.svg" /></li>
+            <li><img src="/Linkedin.svg" /></li>
+            <li><img src="/instagram.svg" /></li>
+          </ul>
+        </div>
+
+        <p class="d-flex col-12 footer-copyright text-center">Cause © 2020</p>
       </div>
     </div>
-    <div class="tag-line">
-      We are a for-purpose social enterprise<br />
-      Made with <i class="mdi mdi-heart"></i> Melbourne
-    </div>
-    <div class="d-flex col-12 footer-social">
-      <ul class="align-self-center">
-        <li><img src="/facebook.svg" /></li>
-        <li><img src="/twitter.svg" /></li>
-        <li><img src="/Linkedin.svg" /></li>
-        <li><img src="/instagram.svg" /></li>
-      </ul>
-    </div>
-
-    <p class="d-flex col-12 footer-copyright text-center">Cause © 2020</p>
   </footer>
 </template>
 <style lang="scss" scoped>
@@ -33,6 +37,9 @@
   padding-bottom: 20px;
   background-color: #0c1831;
   position: relative;
+  .container {
+    position: relative;
+  }
   h2 {
     color: #3c76a6;
     font-family: Roboto;

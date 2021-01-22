@@ -1,7 +1,7 @@
 import Testimonials from '~/components/Testimonials.vue'
 
 export default {
-  title: 'Example/Testimonials',
+  title: 'Components/Testimonials',
   component: Testimonials,
   argTypes: {
     backgroundColor: { control: 'color' },

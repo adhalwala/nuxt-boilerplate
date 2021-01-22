@@ -1,7 +1,7 @@
 import InformationStrip from '~/components/InformationStrip.vue'
 
 export default {
-  title: 'Example/InformationStrip',
+  title: 'Components/InformationStrip',
   component: InformationStrip,
   argTypes: {
     backgroundColor: { control: 'color' },

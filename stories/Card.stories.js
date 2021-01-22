@@ -2,7 +2,7 @@ import CCard from '~/components/Card.vue'
 import ICard from '~/components/CauseCard.vue'
 
 export default {
-  title: 'Example/Cards',
+  title: 'Components/Cards',
   component: CCard,
   ICard,
   // decorators: [

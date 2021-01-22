@@ -2,7 +2,7 @@ import UserMenu from '~/components/UserMenu.vue'
 import SiteMenu from '~/components/SiteMenu.vue'
 
 export default {
-  title: 'Example/UserMenu',
+  title: 'Components/NavigationMenu',
   component: UserMenu,
 
   SiteMenu,
@@ -25,10 +25,10 @@ const OpenMenu = (args, { argTypes }) => ({
   template: '<site-menu v-bind="$props" />',
 })
 
-export const Menu = Template.bind({})
-Menu.args = {
+export const NavigationMenuButton = Template.bind({})
+NavigationMenuButton.args = {
   primary: true,
   label: 'Button',
 }
-export const Sitemenu = OpenMenu.bind({})
-Sitemenu.args = {}
+export const NavigationMenu = OpenMenu.bind({})
+NavigationMenu.args = {}

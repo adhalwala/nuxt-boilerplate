@@ -48,8 +48,11 @@
 }
 .v-application .primary-theme:focus,
 .v-application .primary-theme:active {
-  /* background-color: #2d597d !important;
-  border-color: #2d597d !important; */
+  background-color: #2d597d !important;
+  border-color: #2d597d !important;
+}
+.c-primary-btn .theme--light.v-btn:focus:before {
+  opacity: 0;
 }
 .banner-btn .v-icon {
   color: #ffffff;
@@ -57,7 +60,25 @@
 .primary-theme .v-btn__content {
   z-index: 999;
 }
-
+.c-primary-btn button {
+  position: relative;
+  overflow: hidden;
+}
+.c-primary-btn button:after {
+  content: '';
+  width: 120px;
+  height: 120px;
+  background-color: #2d597d;
+  position: absolute;
+  bottom: -130px;
+  border-radius: 100%;
+  box-shadow: none;
+  transition: 0.2s;
+}
+.c-primary-btn button:hover:after {
+  bottom: -80px;
+  transition: 0.2s;
+}
 @media screen and (max-width: 600px) {
   .v-application .primary-theme {
     font-size: 18px;
@@ -70,5 +91,15 @@
     position: absolute;
     left: -32px;
     top: -1px;
+  }
+  .c-primary-btn button:after {
+    content: '';
+    width: 80px;
+    height: 80px;
+    bottom: -90px;
+  }
+  .c-primary-btn button:hover:after {
+    bottom: -60px;
+    transition: 0.2s;
   }
 }

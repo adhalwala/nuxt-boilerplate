@@ -3,7 +3,7 @@
     <div class="home-page">
       <v-container>
         <v-row>
-          <div class="d-flex col-12 pt-1 pt-sm-2 align-center">
+          <div class="d-flex col-12 pt-3 pt-sm-2 align-center">
             <div class="col-6 pt-0 pt-sm-2">
               <logo class="" :width="width" />
             </div>
@@ -23,17 +23,17 @@
       </v-container>
     </div>
     <information-strip class="col-12 pt-0 pb-0" />
-    <howit-works class="mt-10" />
+    <howit-works class="mt-10 howitworks-wrapper" />
     <div class="bg-primary mb-sm-0 mb-15">
       <v-container>
         <v-row>
-          <logos-showcase
+          <heading-copy-block
             title="Hundreds of stores"
             text="We’ve partnered with the brands you love. And more are joining all the time."
             label="Explore stores"
           />
-          <v-col class="d-flex col-6 text-center">
-            <showcase-images />
+          <v-col class="d-flex col text-center">
+            <logos-showcase />
           </v-col>
         </v-row>
       </v-container>
@@ -62,14 +62,14 @@
     <div class="bg-primary show-case-right-left">
       <v-container>
         <v-row class="flex-md-row-reverse">
-          <logos-showcase
-            class="col-md-5 col-6"
+          <heading-copy-block
+            class=""
             title="Thousands of charities"
             text="There are over 57,000 charities on Cause. All registered and independently verified."
             label="Explore stores"
           />
           <v-col class="d-flex text-center">
-            <showcase-images />
+            <logos-showcase />
           </v-col>
         </v-row>
       </v-container>
@@ -106,7 +106,7 @@
         </span>
       </v-container>
     </div>
-    <div class="pt-3 pb-3 pb-sm-15 pt-sm-15 mb-2 mb-sm-10">
+    <div class="pt-3 pb-3 pb-sm-15 pt-sm-15 mb-0 c-blog">
       <h3 class="text-center free-text-lable">
         Add The Cause Button Now.
         <br />
@@ -144,7 +144,7 @@
           />
         </v-row>
         <my-button
-          class="mt-8 mt-sm-15"
+          class="mt-8 mt-sm-16"
           label="Add the button to chrome"
           icon="mdi mdi-heart"
         />
@@ -165,6 +165,7 @@
 .counter-main-wrapper {
   padding-top: 100px;
 }
+
 .counter-bottom-line {
   color: #a5d6fe;
   font-family: Roboto;
@@ -194,9 +195,21 @@
     font-size: 20px;
     line-height: 30px;
     margin-top: 40px;
+    margin-bottom: 20px;
   }
 }
-@media screen and (max-width: 1024px) and (min-width: 960px) {
+.c-blog {
+  max-width: 1390px;
+  margin: auto;
+}
+
+@media screen and (min-width: 1900px) {
+  .howitworks-wrapper {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 960px) {
   .show-case-right-left .logos-showcase-images {
     left: -170px;
   }
@@ -229,11 +242,23 @@
     margin: auto;
   }
   .footer-wrapper {
-    margin-top: 90px !important;
+    margin-top: 0px !important;
   }
 }
 </style>
 <style>
+.show-case-right-left .logo-showcase-text {
+  margin-left: auto;
+}
+.show-case-right-left .top-logo-wrapper {
+  right: 60px;
+}
+@media screen and (min-width: 1900px) {
+  .show-case-right-left .top-logo-wrapper {
+    right: 0px;
+  }
+}
+
 @media screen and (max-width: 959px) and (min-width: 600px) {
   .logos-showcase-images {
     right: auto !important;
@@ -243,19 +268,65 @@
     left: -45px;
   }
 }
+@media screen and (max-width: 600px) {
+  .banner-wrapper {
+    min-height: 400px;
+  }
+  .c-blog {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0px !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .c-blog {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px !important;
+  }
+  .cta--wrapper {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 0px;
+    padding-top: 14px;
+  }
+}
 @media screen and (max-width: 599px) {
   .left-side-home .banner-btn,
-  .left-side-home .c-primary-btn {
+  .left-side-home .c-primary-btn,
+  .left-side-home .c-primary-btn button,
+  .c-blog .c-primary-btn button {
     width: 100%;
+  }
+  .c-blog .c-primary-btn {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 60px;
   }
   .left-side-home .c-primary-btn {
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 1024px) and (min-width: 960px) {
-  .banner-slider .heart-slider {
-    width: 400px !important;
-    height: 400px !important;
+@media screen and (max-width: 1224px) and (min-width: 960px) {
+  .banner-slider .heart-slider.v-carousel {
+    width: 426px !important;
+    height: 380px !important;
+  }
+  .banner-slider .sliderlogo {
+    height: 92px !important;
+    width: 92px !important;
+  }
+  .banner-slider .heart-slider.v-carousel:after {
+    height: 100.3%;
+    background-size: 100% 382px;
+
+    /* background-size: 100%; */
+  }
+  .c-blog .row {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
 </style>
@@ -265,8 +336,8 @@ import Usermenu from '~/components/UserMenu.vue'
 import Banner from '~/components/Banner.vue'
 import InformationStrip from '~/components/InformationStrip.vue'
 import HowitWorks from '~/components/HowitWorks.vue'
+import HeadingCopyBlock from '~/components/HeadingCopyBlock.vue'
 import LogosShowcase from '~/components/LogosShowcase.vue'
-import ShowcaseImages from '~/components/ShowcaseImages.vue'
 import CouseCard from '~/components/CauseCard.vue'
 import Testimonials from '~/components/Testimonials.vue'
 import Counter from '~/components/Counter.vue'
@@ -283,8 +354,8 @@ export default {
     Banner,
     InformationStrip,
     HowitWorks,
+    HeadingCopyBlock,
     LogosShowcase,
-    ShowcaseImages,
     CouseCard,
     Testimonials,
     Counter,

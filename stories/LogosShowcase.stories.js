@@ -1,7 +1,7 @@
 import LogosShowcase from '~/components/LogosShowcase.vue'
 
 export default {
-  title: 'Example/LogosShowcase',
+  title: 'Components/LogosShowcase',
   component: LogosShowcase,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -22,8 +22,8 @@ const Template = (args, { argTypes }) => ({
   template: '<logos-showcase v-bind="$props" />',
 })
 
-export const Showcase = Template.bind({})
-Showcase.args = {
+export const Logosshowcase = Template.bind({})
+Logosshowcase.args = {
   title: 'Hundreds of stores',
   text:
     'We’ve partnered with the brands you love. And more are joining all the time.',

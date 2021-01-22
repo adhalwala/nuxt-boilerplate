@@ -13,11 +13,7 @@
         <img src="/rocket.svg" class="rocket-img d-flex ml-auto mr-auto" />
         <h2>{{ message }}</h2>
         <v-col cols="11" sm="6" class="nofify-email ml-auto mr-auto mt-5">
-          <v-text-field
-            class="justify-center white--text"
-            label="Email*"
-            required
-          ></v-text-field>
+          <text-input label="email" />
         </v-col>
         <my-button
           :icon="icon"

@@ -1,8 +1,10 @@
 import MyButton from '~/components/Button.vue'
+import ExploreButton from '~/components/ExploreButton.vue'
 
 export default {
-  title: 'Example/Buttons',
+  title: 'Components/Buttons',
   component: MyButton,
+  ExploreButton,
   argTypes: {
     backgroundColor: { control: 'color' },
     size: {
@@ -28,19 +30,13 @@ PrimaryPlusIcon.args = {
   icon: 'mdi mdi-heart',
 }
 
-// export const Secondary = Template.bind({})
-// Secondary.args = {
-//   label: 'Button',
-// }
+const Textbutton = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { ExploreButton },
+  template: '<explore-button v-bind="$props" />',
+})
 
-// export const Large = Template.bind({})
-// Large.args = {
-//   size: 'large',
-//   label: 'Button',
-// }
-
-// export const Small = Template.bind({})
-// Small.args = {
-//   size: 'small',
-//   label: 'Button',
-// }
+export const TextButton = Textbutton.bind({})
+TextButton.args = {
+  label: 'Explore Button',
+}

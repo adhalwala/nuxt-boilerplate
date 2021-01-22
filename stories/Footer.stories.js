@@ -4,7 +4,7 @@ import FooterSocial from '~/components/FooterSocial'
 import FooterCopyright from '~/components/FooterCopyright'
 
 export default {
-  title: 'Example/Footer',
+  title: 'Components/Footer',
   component: Footers,
   FooterLink,
   FooterSocial,

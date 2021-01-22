@@ -6,7 +6,7 @@ import HeadingH4link from '~/components/HeadingH4link.vue'
 import Paragraph from '~/components/Paragraph.vue'
 
 export default {
-  title: 'Example/Heading',
+  title: 'Components/Heading',
   component: HeadingH1,
   HeadingH1Alt,
   HeadingH2,

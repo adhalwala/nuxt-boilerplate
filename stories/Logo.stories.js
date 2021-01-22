@@ -1,7 +1,7 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
-  title: 'Example/Logo',
+  title: 'Components/Logo',
   component: Logo,
   // decorators: [
   //   () => ({

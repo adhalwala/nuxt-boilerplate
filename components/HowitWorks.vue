@@ -1,13 +1,23 @@
 <template>
   <div class="">
-    <h2 class="HowItWorks d-md-none d-block pl-5 pr-5 text-center">
+    <h2 class="HowItWorks d-md-none d-block pl-5 pr-5 text-left text-sm-center">
       How it Works ?
     </h2>
     <div class="gridContainer d-md-flex d-inline-block align-self-center">
       <div
-        class="containerOneChildOne col-12 col-md-7 text-left align-self-center pr-sm-15 pr-0 pl-0"
+        class="containerOneChildOne col-12 col-md-7 text-left align-self-center pl-0"
       >
-        <div class="imgContainer">
+        <div
+          class="imgContainer"
+          data-aos="fade-right"
+          data-aos-offset="50"
+          data-aos-delay="30"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center"
+        >
           <video
             id="myvid"
             ref="vidBlock"
@@ -56,6 +66,19 @@
             <p>Just two clicks to install. It’s 100% free.</p>
           </div>
         </div>
+        <div class="col-12 text-center how-it-work-mobile mt-6 col pl-0 pr-0">
+          <i
+            class="mdi mdi-chevron-left"
+            @click="next(active_el - 1)"
+            :class="{ disabled: active_el === 1 }"
+          ></i>
+          <span class="bold black-color">{{ active_el }} / </span>3
+          <i
+            class="mdi mdi-chevron-right"
+            @click="next(active_el + 1)"
+            :class="{ disabled: active_el === 3 }"
+          ></i>
+        </div>
       </div>
     </div>
   </div>
@@ -87,17 +110,24 @@
   // display: grid;
   // grid-template-columns: 45% 55%;
   // min-height: 600px;
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 100px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1200px) and (min-width: 960px) {
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+  @media screen and (max-width: 601px) {
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
   }
 }
 
 .containerOneChildOne {
-  // text-align: center;
-  // place-items: center;
+  @media screen and (min-width: 601px) {
+    padding-right: 100px;
+  }
 }
 
 .containerOneChildOne img {
@@ -110,6 +140,7 @@
   // margin-left: 20px;
   // border-left: 2px solid #bdbdbd;
   border-left: 1px solid #151515;
+
   > div {
     cursor: pointer;
   }
@@ -132,6 +163,7 @@
     letter-spacing: 0.5px;
     line-height: 28px;
     margin: 0px;
+    max-width: 335px;
   }
   > div {
     border: 0px;
@@ -152,6 +184,51 @@
         z-index: 99;
         background: #3c76a6;
         border-radius: 100px;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    border-left: 0;
+    border-bottom: 1px solid #151515;
+    h6 {
+      font-size: 16px;
+
+      font-weight: bold;
+    }
+    p {
+      line-height: 24px;
+    }
+    > div {
+      padding-left: 0px;
+      min-height: 120px;
+      &:not(.active) {
+        display: none;
+      }
+      &.active,
+      &:hover {
+        &:after {
+          content: '';
+          position: absolute;
+          left: auto;
+          bottom: -2px;
+          top: auto;
+          width: 33.33%;
+          height: 3px;
+          z-index: 999;
+          z-index: 99;
+          background: #3c76a6;
+          border-radius: 100px;
+        }
+      }
+      &:nth-child(2) {
+        &:after {
+          left: 33.33%;
+        }
+      }
+      &:nth-child(3) {
+        &:after {
+          left: 66.66%;
+        }
       }
     }
   }
@@ -200,10 +277,51 @@
     }
   }
 }
+.how-it-work-mobile {
+  .mdi-chevron-left {
+    float: left;
+    align-items: center;
+    display: inline-flex;
+    font-size: 26px;
+    line-height: 22px;
+    left: -10px;
+    position: relative;
+  }
+  .mdi-chevron-right {
+    float: right;
+    align-items: center;
+    display: inline-flex;
+    font-size: 26px;
+    line-height: 22px;
+    right: -10px;
+    position: relative;
+  }
+  i {
+    opacity: 0.5;
+    color: #0c1831;
+    &:hover {
+      opacity: 1;
+    }
+    &.disabled {
+      opacity: 0.2;
+    }
+  }
+  span {
+    font-weight: bold;
+  }
+  @media screen and (min-width: 601px) {
+    display: none;
+  }
+}
 </style>
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 export default {
   name: 'HowitWorks',
+  created() {
+    AOS.init()
+  },
   props: {
     title: {
       type: String,
@@ -225,6 +343,17 @@ export default {
       const video = this.$refs.vidBlock
       video.currentTime = value
       this.active_el = el
+    },
+    next(value) {
+      const video = this.$refs.vidBlock
+      this.active_el = value
+      if (this.active_el === 1) {
+        video.currentTime = 0
+      } else if (this.active_el === 2) {
+        video.currentTime = 4
+      } else {
+        video.currentTime = 11
+      }
     },
     onTimeUpdateListener(element) {
       this.videoTime = element.srcElement.currentTime
