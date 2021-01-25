@@ -66,6 +66,7 @@
 }
 </style>
 <script>
+import HeadingH4link from '~/components/HeadingH4link.vue'
 import HeadingH3 from '~/components/HeadingH3.vue'
 import Paragraph from '~/components/Paragraph.vue'
 // import ShowcaseImages from '~/components/ShowcaseImages.vue'
@@ -74,6 +75,7 @@ export default {
   components: {
     HeadingH3,
     Paragraph,
+    HeadingH4link,
     // ShowcaseImages,
   },
   props: {
