@@ -7,7 +7,7 @@
             <div class="col-6 pt-0 pt-sm-2">
               <logo class="" :width="width" />
             </div>
-            <usermenu class="col-6 pt-0 pt-sm-2" />
+            <site-menu class="col-6 pt-0 pt-sm-2" />
           </div>
           <div class="d-flex width-full">
             <banner
@@ -332,7 +332,7 @@
 </style>
 <script>
 import Logo from '~/components/Logo.vue'
-import Usermenu from '~/components/UserMenu.vue'
+import SiteMenu from '~/components/SiteMenu.vue'
 import Banner from '~/components/Banner.vue'
 import InformationStrip from '~/components/InformationStrip.vue'
 import HowitWorks from '~/components/HowitWorks.vue'
@@ -350,7 +350,7 @@ export default {
 
   components: {
     Logo,
-    Usermenu,
+    SiteMenu,
     Banner,
     InformationStrip,
     HowitWorks,

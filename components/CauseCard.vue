@@ -1,5 +1,8 @@
 <template>
-  <v-col class="col-12 col-md-4 text-center cause-card">
+  <v-col
+    :class="isDark ? 'dark' : ''"
+    class="col-12 col-md-4 text-center cause-card"
+  >
     <v-card class="pa-2 d-flex row text-center" dark>
       <div
         class="text-center col-12"
@@ -108,6 +111,9 @@
   transition: 0.3s;
 }
 .cause-card {
+  &.dark {
+    background-color: #0c1831;
+  }
   @media screen and (max-width: 600px) {
     .theme--dark.v-card h3 {
       font-size: 20px;
@@ -147,6 +153,10 @@ export default {
     description: {
       default: '',
       type: String,
+    },
+    isDark: {
+      type: Boolean,
+      default: false,
     },
   },
 }

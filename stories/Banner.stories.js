@@ -33,7 +33,7 @@ const FullBannerTemplate = (args, { argTypes }) => ({
 
 export const BannerLeft = Template.bind({})
 BannerLeft.args = {
-  bannertitle: 'Plant a tree',
+  // bannertitle: 'Plant a tree',
   bannersubtitle: 'when you shop online',
   label: 'Add The Button to Chrome',
   icon: 'mdi mdi-heart',

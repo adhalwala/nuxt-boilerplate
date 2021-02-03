@@ -1,6 +1,6 @@
 <template>
   <div class="text-center c-primary-btn">
-    <v-btn class="primary-theme" :rounded="true" :ripple="false"
+    <v-btn class="primary-theme" :rounded="true" v-ripple
       ><i style="font-size: 24px; margin-right: 5px" :class="icon"></i>
       {{ label }}
     </v-btn>

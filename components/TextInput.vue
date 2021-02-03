@@ -54,8 +54,8 @@
 .cause-input .mdi-information {
   transform: rotate(180deg);
 }
-.cause-input .mdi-checkbox-marked-circle {
-  color: #38b38e;
+.cause-input .primary--text .mdi-checkbox-marked-circle {
+  color: #38b38e !important;
 }
 .cause-input .v-input__append-inner {
   position: absolute;

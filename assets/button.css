@@ -74,6 +74,7 @@
   border-radius: 100%;
   box-shadow: none;
   transition: 0.2s;
+  display: none;
 }
 .c-primary-btn button:hover:after {
   bottom: -80px;
@@ -88,9 +89,10 @@
   .primary-theme i {
     font-size: 22px !important;
     margin-right: 5px;
-    position: absolute;
+    position: relative;
+    /* position: absolute;
     left: -32px;
-    top: -1px;
+    top: -1px; */
   }
   .c-primary-btn button:after {
     content: '';

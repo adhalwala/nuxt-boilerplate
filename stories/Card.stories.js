@@ -5,6 +5,11 @@ export default {
   title: 'Components/Cards',
   component: CCard,
   ICard,
+  argTypes: {
+    isDark: {
+      control: 'boolean',
+    },
+  },
   // decorators: [
   //   () => ({
   //     template: '<v-app><v-main><story /></v-main></v-app>',

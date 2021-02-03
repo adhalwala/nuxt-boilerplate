@@ -1,44 +1,43 @@
 <template>
   <div class="site-menu-main">
     <div class="text-right user-menu header-main">
-      <v-menu transition="slide-x-transition" bottom right>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            class="primary-theme usermenu-primary"
-            :ripple="false"
-            v-bind="attrs"
-            v-on="on"
-          >
-            <v-icon left> mdi-account </v-icon>
-            <v-icon right> mdi-menu </v-icon>
-          </v-btn>
-        </template>
-        <v-list class="open-site-menu">
-          <div class="menu-link-wrpr d-flex">
-            <div class="col text-sm-left align-self-center pl-5">
-              <v-icon>mdi mdi-heart</v-icon>
-              <span class="signup">Add the Button</span>
+      <div
+        class="v-btn v-btn--contained v-btn--rounded theme--light v-size--default primary-theme"
+      >
+        <v-icon left> mdi-account </v-icon>
+        <v-menu transition="slide-y-transition" offset-y="top">
+          <template v-slot:activator="{ on, attrs }">
+            <v-icon right :ripple="false" v-bind="attrs" v-on="on">
+              mdi-menu
+            </v-icon>
+          </template>
+          <v-list class="open-site-menu">
+            <div class="menu-link-wrpr d-flex">
+              <div class="col text-sm-left align-self-center pl-5">
+                <v-icon>mdi mdi-heart</v-icon>
+                <span class="signup">Add the Button</span>
+              </div>
             </div>
-          </div>
-          <ul class="menu-internal-link">
-            <li>
-              <a href="#">Stores</a>
-            </li>
-            <li>
-              <a href="#">Charities</a>
-            </li>
-            <li>
-              <a href="#">About Cause</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <v-icon>mdi-close</v-icon>
-            </li>
-          </ul>
-        </v-list>
-      </v-menu>
+            <ul class="menu-internal-link">
+              <li>
+                <a href="#">Stores</a>
+              </li>
+              <li>
+                <a href="#">Charities</a>
+              </li>
+              <li>
+                <a href="#">About Cause</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <li>
+                <v-icon>mdi-close</v-icon>
+              </li>
+            </ul>
+          </v-list>
+        </v-menu>
+      </div>
     </div>
   </div>
 </template>
@@ -143,14 +142,25 @@
     background-color: #24324e !important;
   }
 }
+.v-menu__content {
+  z-index: 999 !important;
+}
 </style>
 
 <style scoped lang="scss">
 .site-menu-main {
   .usermenu-primary {
     width: 85px;
-    height: 32px !important;
+    height: 38px !important;
     z-index: 1;
+  }
+  .mdi-menu {
+    &:focus {
+      background: transparent !important;
+      &:after {
+        opacity: 0;
+      }
+    }
   }
   .open-site-menu {
     height: 368px;
@@ -204,6 +214,7 @@
   }
   @media screen and (max-width: 600px) {
     padding: 20px;
+    padding-right: 10px;
     .open-site-menu {
       width: 100%;
       height: 100vh;
@@ -218,5 +229,9 @@
 <script>
 export default {
   name: 'SiteUserMenu',
+
+  data: () => ({
+    offset: true,
+  }),
 }
 </script>

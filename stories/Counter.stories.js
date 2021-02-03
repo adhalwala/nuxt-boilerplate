@@ -3,6 +3,11 @@ import Counter from '~/components/Counter.vue'
 export default {
   title: 'Components/Counter',
   component: Counter,
+  argTypes: {
+    isDark: {
+      control: 'boolean',
+    },
+  },
   // decorators: [
   //   () => ({
   //     template: '<v-app><v-main><story /></v-main></v-app>',

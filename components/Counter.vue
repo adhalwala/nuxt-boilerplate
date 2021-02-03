@@ -1,7 +1,9 @@
 <template>
   <v-col
+    :style="style"
     cols="12"
     md="4"
+    :class="isDark ? 'dark' : ''"
     class="flex-grow-1 text-center counter-wrape counter-text-wrapper"
   >
     <v-card class="pa-2" dark>
@@ -18,6 +20,9 @@
 .counter-wrape {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
+  &.dark {
+    background-color: #0c1831;
+  }
 }
 .counter-wrape .theme--dark.v-card {
   background-color: transparent;
@@ -102,6 +107,14 @@ export default {
     bottomtext: {
       default: '',
       type: String,
+    },
+    backgroundColor: {
+      type: String,
+      default: '',
+    },
+    isDark: {
+      type: Boolean,
+      default: false,
     },
   },
 }

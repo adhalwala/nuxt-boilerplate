@@ -2,7 +2,22 @@
   <div class="d-flex banner-wrapper">
     <v-col class="text-left d-flex">
       <div class="align-self-center width-full">
-        <h2>{{ bannertitle }}</h2>
+        <v-carousel
+          class=""
+          hide-delimiters
+          cycle
+          height="auto"
+          :show-arrows="false"
+        >
+          <v-carousel-item
+            v-for="(item, i) in bannertitle"
+            :key="i"
+            reverse-transition="slide-fade"
+            transition="slide-fade"
+          >
+            <h2>{{ item.name }}</h2>
+          </v-carousel-item>
+        </v-carousel>
         <h3>{{ bannersubtitle }}</h3>
         <p>
           Add the Cause Button and start raising money for
@@ -93,14 +108,28 @@ export default {
       default: '',
       type: String,
     },
-    bannertitle: {
-      default: '',
-      type: String,
-    },
     bannersubtitle: {
       default: '',
       type: String,
     },
+  },
+  data() {
+    return {
+      bannertitle: [
+        {
+          name: 'Plant a Tree',
+        },
+        {
+          name: 'Buy a Chicken',
+        },
+        {
+          name: 'Fix a Well',
+        },
+        {
+          name: 'Build a School',
+        },
+      ],
+    }
   },
 }
 </script>

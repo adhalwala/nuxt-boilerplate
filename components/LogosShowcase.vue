@@ -106,6 +106,7 @@
       transition: 0.4s;
       -webkit-transition: 0.4s;
       background-color: #f3f3f4;
+      box-shadow: 0 0 15px 1px rgb(12 24 49 / 20%);
     }
     &:active,
     &:focus {

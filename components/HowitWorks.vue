@@ -141,9 +141,6 @@
   // border-left: 2px solid #bdbdbd;
   border-left: 1px solid #151515;
 
-  > div {
-    cursor: pointer;
-  }
   h2 {
   }
   h6 {
@@ -154,6 +151,14 @@
     letter-spacing: 0;
     line-height: 24px;
     margin-bottom: 3px;
+  }
+  > div {
+    cursor: pointer;
+    &:hover {
+      h6 {
+        color: #2e5a7d;
+      }
+    }
   }
   p {
     color: #0c1831;
@@ -172,8 +177,7 @@
     padding-left: 40px;
     padding-top: 15px;
 
-    &.active,
-    &:hover {
+    &.active {
       &:after {
         content: '';
         position: absolute;
@@ -185,6 +189,8 @@
         background: #3c76a6;
         border-radius: 100px;
       }
+    }
+    &:hover {
     }
   }
   @media screen and (max-width: 600px) {
