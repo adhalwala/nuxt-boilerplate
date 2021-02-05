@@ -1,6 +1,5 @@
 <template>
   <v-col
-    :style="style"
     cols="12"
     md="4"
     :class="isDark ? 'dark' : ''"

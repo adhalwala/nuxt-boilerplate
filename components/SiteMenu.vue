@@ -1,49 +1,85 @@
 <template>
-  <div class="site-menu-main">
+  <div class="">
     <div class="text-right user-menu header-main">
       <div
         class="v-btn v-btn--contained v-btn--rounded theme--light v-size--default primary-theme"
       >
-        <v-icon left> mdi-account </v-icon>
-        <v-menu transition="slide-y-transition" offset-y="top">
-          <template v-slot:activator="{ on, attrs }">
-            <v-icon right :ripple="false" v-bind="attrs" v-on="on">
-              mdi-menu
-            </v-icon>
-          </template>
-          <v-list class="open-site-menu">
-            <div class="menu-link-wrpr d-flex">
-              <div class="col text-sm-left align-self-center pl-5">
-                <v-icon>mdi mdi-heart</v-icon>
-                <span class="signup">Add the Button</span>
-              </div>
-            </div>
-            <ul class="menu-internal-link">
-              <li>
-                <a href="#">Stores</a>
-              </li>
-              <li>
-                <a href="#">Charities</a>
-              </li>
-              <li>
-                <a href="#">About Cause</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <v-icon>mdi-close</v-icon>
-              </li>
-            </ul>
-          </v-list>
-        </v-menu>
+        <nav class="header__nav">
+          <ul class="header__navbar menu-internal-link">
+            <li class="header__item">
+              <a class="header__link">
+                <v-icon> mdi-account </v-icon>
+                <!-- Header Navigation Menu Icons -->
+                <v-icon
+                  right
+                  class="header--button"
+                  v-if="show"
+                  key="on"
+                  @click="show = false"
+                >
+                  mdi-close
+                </v-icon>
+
+                <v-icon
+                  right
+                  class="header--button"
+                  v-else
+                  key="off"
+                  @click="show = true"
+                >
+                  mdi-menu
+                </v-icon>
+              </a>
+              <!-- Dropdown Menu -->
+              <transition name="dropdown">
+                <div
+                  class="dropdown__menu open-site-menu"
+                  v-bind:class="{ active: show }"
+                  v-if="show"
+                >
+                  <div class="menu-link-wrpr d-flex">
+                    <div
+                      class="col text-sm-left text-center align-self-center pl-5"
+                    >
+                      <v-icon>mdi mdi-heart</v-icon>
+                      <span class="signup">Add the Button</span>
+                    </div>
+                  </div>
+                  <ul class="menu-internal-link">
+                    <li>
+                      <a href="#">Stores</a>
+                    </li>
+                    <li>
+                      <a href="#">Charities</a>
+                    </li>
+                    <li>
+                      <a href="#">About Cause</a>
+                    </li>
+                    <li>
+                      <a href="#">Blog</a>
+                    </li>
+                    <li key="on" @click="show = false">
+                      <v-icon>mdi-close</v-icon>
+                    </li>
+                  </ul>
+                </div>
+              </transition>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </div>
 </template>
 <style>
+.dropdown__menu.open-site-menu {
+  position: absolute;
+  top: 55px;
+  right: 0px;
+  z-index: 9999;
+}
 .open-site-menu {
-  height: 368px;
+  height: auto;
   width: 335px;
   background-color: #0c1831 !important;
   box-shadow: 0 0 6px 0 rgba(12, 24, 49, 0.2);
@@ -59,7 +95,7 @@
   color: #ffffff;
 }
 .open-site-menu .menu-link-wrpr i {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 .open-site-menu .menu-link-wrpr span {
   color: #ffffff;
@@ -99,10 +135,10 @@
   text-align: center;
   margin: auto;
   display: none;
-  color: #ffffff;
+  color: #ffffff !important;
   bottom: 26px;
   position: absolute;
-  font-size: 30px;
+  font-size: 30px !important;
   margin: auto;
   right: 0;
   left: 0;
@@ -120,9 +156,15 @@
   .open-site-menu .menu-internal-link li i {
     display: block;
   }
-  .open-site-menu {
-    width: 100%;
-    height: 100%;
+  .dropdown__menu.open-site-menu {
+    position: fixed;
+    width: 95%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 96%;
+    top: 0;
+    bottom: 0;
   }
   .primary-theme.usermenu-primary i {
     left: auto;
@@ -141,6 +183,10 @@
     max-height: 96% !important;
     background-color: #24324e !important;
   }
+}
+.header-main button.mdi-menu[aria-expanded='true']::before {
+  content: '\F0156';
+  color: #0c1831;
 }
 .v-menu__content {
   z-index: 999 !important;
@@ -163,7 +209,8 @@
     }
   }
   .open-site-menu {
-    height: 368px;
+    z-index: 9999;
+    // height: 368px;
     width: 335px;
     background-color: #0c1831;
     box-shadow: 0 0 6px 0 rgba(12, 24, 49, 0.2);
@@ -171,7 +218,7 @@
     overflow: hidden;
     .menu-link-wrpr {
       height: 63px;
-      background-color: #24324e;
+      // background-color: #24324e;
       box-sizing: border-box;
 
       border-bottom: 1px solid #a5d6fe;
@@ -232,6 +279,7 @@ export default {
 
   data: () => ({
     offset: true,
+    show: false,
   }),
 }
 </script>

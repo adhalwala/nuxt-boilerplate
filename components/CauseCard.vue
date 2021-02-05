@@ -20,8 +20,8 @@
       <h3>{{ title }}</h3>
       <span class="align-self-center">{{ description }} </span>
       <div class="text-center col-12 align-self-end">
-        <button class="learn-more-btn">
-          Learn more <v-icon>mdi-chevron-right</v-icon
+        <button class="learn-more-btn" v-if="isButton">
+          {{ buttontext }} <v-icon>mdi-chevron-right</v-icon
           ><v-icon>mdi-chevron-double-right</v-icon>
         </button>
       </div>
@@ -33,6 +33,7 @@
   background-color: transparent;
   box-shadow: none;
   height: 100%;
+  margin: 0px;
 }
 .cause-card .theme--dark.v-card h3 {
   color: #a5d6fe;
@@ -154,7 +155,15 @@ export default {
       default: '',
       type: String,
     },
+    buttontext: {
+      default: '',
+      type: String,
+    },
     isDark: {
+      type: Boolean,
+      default: false,
+    },
+    isButton: {
       type: Boolean,
       default: false,
     },

@@ -2,26 +2,9 @@
   <div class="d-flex banner-wrapper">
     <v-col class="text-left d-flex">
       <div class="align-self-center width-full">
-        <v-carousel
-          class=""
-          hide-delimiters
-          cycle
-          height="auto"
-          :show-arrows="false"
-        >
-          <v-carousel-item
-            v-for="(item, i) in bannertitle"
-            :key="i"
-            reverse-transition="slide-fade"
-            transition="slide-fade"
-          >
-            <h2>{{ item.name }}</h2>
-          </v-carousel-item>
-        </v-carousel>
         <h3>{{ bannersubtitle }}</h3>
         <p>
-          Add the Cause Button and start raising money for
-          <strong>sustainable future </strong>– for free!
+          {{ description }}
         </p>
         <my-button
           :icon="icon"
@@ -97,7 +80,7 @@
 <script>
 import MyButton from '~/components/Button.vue'
 export default {
-  name: 'Banner',
+  name: 'InnerBanner',
   components: { MyButton },
   props: {
     label: {
@@ -112,24 +95,10 @@ export default {
       default: '',
       type: String,
     },
-  },
-  data() {
-    return {
-      bannertitle: [
-        {
-          name: 'Plant a Tree',
-        },
-        {
-          name: 'Buy a Chicken',
-        },
-        {
-          name: 'Fix a Well',
-        },
-        {
-          name: 'Build a School',
-        },
-      ],
-    }
+    description: {
+      default: '',
+      type: String,
+    },
   },
 }
 </script>

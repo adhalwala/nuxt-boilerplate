@@ -176,18 +176,23 @@
     position: relative;
     padding-left: 40px;
     padding-top: 15px;
-
+    &:after {
+      content: '';
+      position: absolute;
+      left: -2px;
+      bottom: 0;
+      top: 0;
+      width: 3px;
+      height: 0;
+      z-index: 99;
+      background: #3c76a6;
+      border-radius: 100px;
+      transition: 0.2s;
+      margin: auto;
+    }
     &.active {
       &:after {
-        content: '';
-        position: absolute;
-        left: -2px;
-        top: 0;
-        width: 3px;
         height: 100%;
-        z-index: 99;
-        background: #3c76a6;
-        border-radius: 100px;
       }
     }
     &:hover {
@@ -222,6 +227,7 @@
           height: 3px;
           z-index: 999;
           z-index: 99;
+          transition: 0.2s;
           background: #3c76a6;
           border-radius: 100px;
         }
@@ -367,7 +373,7 @@ export default {
         this.active_el = 1
       } else if (this.videoTime > 4 && this.videoTime < 11) {
         this.active_el = 2
-      } else {
+      } else if (this.videoTime > 11) {
         this.active_el = 3
       }
     },

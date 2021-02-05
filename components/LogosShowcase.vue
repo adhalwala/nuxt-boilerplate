@@ -12,70 +12,70 @@
         data-aos-once="true"
         data-aos-anchor-placement="top-center"
       >
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
-        <a class="showcase-images-heart">
+        <a class="showcase-images-heart ripple--logo" v-ripple>
           <img src="/cause-logo.svg" />
         </a>
       </div>
@@ -83,13 +83,19 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.v-application .ripple--logo {
+  color: #999999 !important;
+  caret-color: #999999 !important;
+}
 .logos-showcase-images {
   // background-color: #f3f9ff;
   background-color: #f3f9ff;
   min-height: 500px;
   width: 100%;
   position: relative;
-
+  .ripple {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
   a {
     padding: 15px;
     border-radius: 75px;
@@ -102,7 +108,7 @@
     transition: 0.1s;
     -webkit-transition: 0.1s;
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
       transition: 0.4s;
       -webkit-transition: 0.4s;
       background-color: #f3f3f4;
@@ -121,7 +127,7 @@
     }
   }
   .top-logo-wrapper {
-    top: -35px;
+    top: -45px;
     position: relative;
     transition: 0.2s;
     -webkit-transition: 0.2s;
@@ -297,6 +303,20 @@ export default {
   name: 'LogosShowcase',
   created() {
     AOS.init()
+  },
+  data() {
+    return {
+      ripple: [
+        {
+          rippleOptions: {
+            time: 0.2,
+            ease: 'linear',
+            color: 'rgb(0, 0, 0)',
+            startingOpacity: 1,
+          },
+        },
+      ],
+    }
   },
   components: {},
   props: {

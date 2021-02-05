@@ -165,6 +165,7 @@
     top: 0px;
     right: 20px;
     position: absolute;
+    z-index: 9;
     .v-image__image,
     .v-image__image--cover,
     .v-window__container {

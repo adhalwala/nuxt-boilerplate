@@ -1,6 +1,6 @@
 <template>
   <div class="text-center c-primary-btn">
-    <v-btn class="primary-theme" :rounded="true" v-ripple
+    <v-btn class="primary-theme button--ripple" :rounded="true" v-ripple
       ><i style="font-size: 24px; margin-right: 5px" :class="icon"></i>
       {{ label }}
     </v-btn>
@@ -17,6 +17,20 @@
 import '~/assets/button.css'
 export default {
   name: 'MyButton',
+  data() {
+    return {
+      ripple: [
+        {
+          rippleOptions: {
+            time: 1.2,
+            ease: 'linear',
+            color: 'rgb(102, 148, 177)',
+            startingOpacity: 1,
+          },
+        },
+      ],
+    }
+  },
   props: {
     label: {
       default: '',

@@ -25,7 +25,7 @@
     padding: 0px;
   }
   p {
-    width: 425px;
+    max-width: 425px;
     font-size: 16px;
     font-weight: 300;
     margin-top: 15px;

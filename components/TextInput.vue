@@ -13,13 +13,9 @@
       :label="label"
       :rules="[rules.required, rules.email]"
       :append-icon="
-        isValid === ''
-          ? ''
-          : isValid
-          ? 'mdi-checkbox-marked-circle'
-          : 'mdi-information'
+        isValid === true ? 'mdi-checkbox-marked-circle' : 'mdi-information'
       "
-      @input="validateEmailField"
+      @keyup="validateEmailField"
     >
     </v-text-field>
   </v-row>
@@ -51,11 +47,19 @@
   letter-spacing: 0.24px;
   line-height: 21px;
 }
+
 .cause-input .mdi-information {
   transform: rotate(180deg);
+  color: transparent;
 }
-.cause-input .primary--text .mdi-checkbox-marked-circle {
+.cause-input .primary--text .mdi-checkbox-marked-circle,
+.cause-input .mdi-checkbox-marked-circle {
   color: #38b38e !important;
+}
+
+.cause-input .v-input--is-focused .mdi-information,
+.cause-input .v-input--is-focused .v-messages__message {
+  display: none !important;
 }
 .cause-input .v-input__append-inner {
   position: absolute;
@@ -77,8 +81,8 @@ export default {
   },
   data() {
     return {
-      email: '',
       isValid: '',
+      email: '',
       rules: {
         required: (value) => !!value || 'Required.',
         counter: (value) => value.length <= 20 || 'Max 20 characters',

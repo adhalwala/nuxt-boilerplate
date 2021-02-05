@@ -9,6 +9,9 @@ export default {
     isDark: {
       control: 'boolean',
     },
+    isButton: {
+      control: 'boolean',
+    },
   },
   // decorators: [
   //   () => ({
@@ -42,6 +45,26 @@ export const IconCard = IconTemplate.bind({})
 IconCard.args = {
   imgsrc: '/charity-icon.svg',
   title: '100% for Charity',
+  buttontext: 'Learn More',
   description:
     'We do not charge charities anything. They receive 100% of the donation amounts shown.',
+}
+
+export const WithButton = IconTemplate.bind({})
+WithButton.args = {
+  imgsrc: '/charity-icon.svg',
+  title: '100% for Charity',
+  buttontext: 'Learn More',
+  description:
+    'We do not charge charities anything. They receive 100% of the donation amounts shown.',
+  isButton: true,
+}
+export const WithoutButton = IconTemplate.bind({})
+WithoutButton.args = {
+  imgsrc: '/charity-icon.svg',
+  title: '100% for Charity',
+  buttontext: 'Learn More',
+  description:
+    'We do not charge charities anything. They receive 100% of the donation amounts shown.',
+  isButton: false,
 }

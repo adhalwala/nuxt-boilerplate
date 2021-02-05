@@ -11,13 +11,13 @@
           </div>
           <div class="d-flex width-full">
             <banner
-              class="col-12 col-sm-6 left-side-home mt-4 mt-sm-0"
+              class="col-12 col-sm-5 left-side-home mt-4 mt-sm-0"
               bannertitle="Plant a tree"
               bannersubtitle="when you shop online"
               icon="mdi mdi-heart"
               label="Add The Button to Chrome"
             />
-            <banner-image class="col-6 d-flex" />
+            <banner-image class="col-7 d-flex" />
           </div>
         </v-row>
       </v-container>
@@ -31,6 +31,7 @@
             title="Hundreds of stores"
             text="We’ve partnered with the brands you love. And more are joining all the time."
             label="Explore stores"
+            isButton
           />
           <v-col class="d-flex col text-center">
             <logos-showcase />
@@ -61,11 +62,13 @@
     </div>
     <div class="bg-primary show-case-right-left">
       <v-container>
-        <v-row class="flex-md-row-reverse">
+        <v-row class="flex-sm-row-reverse">
           <heading-copy-block
             class=""
             title="Thousands of charities"
-            text="There are over 57,000 charities on Cause. All registered and independently verified."
+            text="There are over 57,000 charities on Cause. All registered and
+          independently verified."
+            isButton
             label="Explore stores"
           />
           <v-col class="d-flex text-center">
@@ -251,14 +254,18 @@
   margin-left: auto;
 }
 .show-case-right-left .top-logo-wrapper {
-  right: 60px;
+  right: 130px;
 }
 @media screen and (min-width: 1900px) {
   .show-case-right-left .top-logo-wrapper {
     right: 0px;
   }
 }
-
+@media screen and (min-width: 600px) {
+  .show-case-right-left .logo-showcase-text {
+    padding-right: 40px;
+  }
+}
 @media screen and (max-width: 959px) and (min-width: 600px) {
   .logos-showcase-images {
     right: auto !important;
@@ -266,6 +273,26 @@
   }
   .show-case-right-left .logos-showcase-images {
     left: -45px;
+  }
+  .logos-showcase {
+    padding-right: 10px;
+  }
+  .logos-showcase-images {
+    transform: scale(0.8) !important;
+    min-height: 400px !important;
+  }
+
+  .show-case-right-left .logo-showcase-text {
+    padding-right: 0px;
+  }
+  .logos-showcase-images .top-logo-wrapper {
+    /* right: 0px; */
+    top: -100px !important;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .show-case-right-left .logos-showcase-images {
+    left: -110px;
   }
 }
 @media screen and (max-width: 600px) {
