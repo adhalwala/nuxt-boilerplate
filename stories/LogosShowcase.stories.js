@@ -3,12 +3,6 @@ import LogosShowcase from '~/components/LogosShowcase.vue'
 export default {
   title: 'Components/LogosShowcase',
   component: LogosShowcase,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-    size: {
-      control: { type: 'select', options: ['small', 'medium', 'large'] },
-    },
-  },
   // decorators: [
   //   () => ({
   //     template: '<v-app><v-main><story /></v-main></v-app>',

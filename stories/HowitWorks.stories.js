@@ -19,4 +19,5 @@ export const HowItWorks = Template.bind({})
 HowItWorks.args = {
   title: 'Big success message!',
   description: 'Email added!',
+  isReverseColumn: false,
 }

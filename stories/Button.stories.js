@@ -1,10 +1,12 @@
 import MyButton from '~/components/Button.vue'
 import ExploreButton from '~/components/ExploreButton.vue'
+import SearchButton from '~/components/SearchButton.vue'
 
 export default {
   title: 'Components/Buttons',
   component: MyButton,
   ExploreButton,
+  SearchButton,
   argTypes: {
     backgroundColor: { control: 'color' },
     size: {
@@ -35,8 +37,19 @@ const Textbutton = (args, { argTypes }) => ({
   components: { ExploreButton },
   template: '<explore-button v-bind="$props" />',
 })
+const Searchbutton = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { SearchButton },
+  template: '<search-button v-bind="$props" />',
+})
 
 export const TextButton = Textbutton.bind({})
 TextButton.args = {
   label: 'Explore Button',
+}
+
+export const FindStore = Searchbutton.bind({})
+FindStore.args = {
+  icon: 'mdi mdi-magnify',
+  placeholder: 'Find your store',
 }

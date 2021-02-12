@@ -23,7 +23,7 @@
       </v-container>
     </div>
     <information-strip class="col-12 pt-0 pb-0" />
-    <howit-works class="mt-10 howitworks-wrapper" />
+    <howit-works class="mt-10" :isReverseColumn="false" />
     <div class="bg-primary mb-sm-0 mb-15">
       <v-container>
         <v-row>

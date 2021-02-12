@@ -13,6 +13,8 @@ const Template = (args, { argTypes }) => ({
 
 export const InnerPageStrip = Template.bind({})
 InnerPageStrip.args = {
-  primary: true,
-  label: 'Button',
+  infotext: 'ABN 12 345 678 901',
+  weburl: 'www.redcross.org.au',
+  hasUrl: true,
+  isRate: true,
 }

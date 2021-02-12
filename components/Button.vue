@@ -1,15 +1,38 @@
 <template>
   <div class="text-center c-primary-btn">
-    <v-btn class="primary-theme button--ripple" :rounded="true" v-ripple
-      ><i style="font-size: 24px; margin-right: 5px" :class="icon"></i>
+    <v-btn
+      class="primary-theme button--ripple"
+      :class="size"
+      :rounded="true"
+      v-ripple
+      ><i style="" :class="icon"></i>
       {{ label }}
     </v-btn>
   </div>
 </template>
+<style>
+.c-primary-btn .primary-theme.small {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  height: 34px !important;
+}
+.c-primary-btn .primary-theme.small i {
+  font-size: 20px !important;
+  margin-right: 10px !important;
+}
+</style>
 <style lang="scss" scoped>
 .banner-btn {
   i {
     color: #ffffff !important;
+    margin-right: 5px;
+    left: -10px;
+    position: relative;
+    font-size: 26px;
   }
 }
 </style>

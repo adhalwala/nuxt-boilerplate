@@ -3,18 +3,59 @@
     <v-col class="text-left d-flex">
       <div class="align-self-center width-full">
         <h3>{{ bannersubtitle }}</h3>
-        <p>
+        <p :style="{ maxWidth: maxwidth }">
           {{ description }}
         </p>
         <my-button
           :icon="icon"
           :label="label"
           class="text-left banner-btn float-left mb-5 mb-sm-0"
+          v-if="isButton"
+        />
+        <search-button
+          v-if="isSearchButton"
+          :icon="icon"
+          :placeholder="placeholder"
         />
       </div>
     </v-col>
   </div>
 </template>
+<style>
+.search-button {
+  width: 242px;
+  border-radius: 25px;
+  background-color: #deecfa;
+  display: flex;
+}
+.search-button .primary-theme {
+  min-width: 50px !important;
+  padding: 0 !important;
+}
+.search-button .primary-theme i {
+  font-size: 30px !important;
+}
+.search-button input {
+  border: 0px;
+  color: #3c76a6;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.45px;
+  line-height: 24px;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+}
+.search-button input::placeholder {
+  color: #3c76a6;
+}
+.search-button input:focus {
+  outline: 0px;
+}
+.search-button .search-icon i {
+  left: 0;
+}
+</style>
 <style lang="scss" scoped>
 .banner-wrapper {
   // padding-top: 100px !important;
@@ -98,6 +139,22 @@ export default {
     description: {
       default: '',
       type: String,
+    },
+    maxwidth: {
+      default: '',
+      type: String,
+    },
+    isButton: {
+      type: Boolean,
+      default: false,
+    },
+    placeholder: {
+      default: '',
+      type: String,
+    },
+    isSearchButton: {
+      type: Boolean,
+      default: false,
     },
   },
 }

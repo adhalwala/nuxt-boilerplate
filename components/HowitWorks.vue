@@ -1,89 +1,108 @@
 <template>
-  <div class="">
+  <div class="howitworks-wrapper">
     <h2 class="HowItWorks d-md-none d-block pl-5 pr-5 text-left text-sm-center">
       How it Works ?
     </h2>
-    <div class="gridContainer d-md-flex d-inline-block align-self-center">
-      <div
-        class="containerOneChildOne col-12 col-md-7 text-left align-self-center pl-0"
-      >
+    <v-container>
+      <v-row class="">
         <div
-          class="imgContainer"
-          data-aos="fade-right"
-          data-aos-offset="50"
-          data-aos-delay="30"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="true"
-          data-aos-anchor-placement="top-center"
+          :class="isReverseColumn ? 'flex-sm-row-reverse' : 'left-to-right'"
+          class="gridContainer width-full d-md-flex reverse-block d-inline-block align-self-center"
         >
-          <video
-            id="myvid"
-            ref="vidBlock"
-            autoplay
-            loop=""
-            class="d-block"
-            width="100%"
-            preload="auto"
-            @timeupdate="onTimeUpdateListener"
+          <v-col class="col-md-7"> </v-col>
+          <div
+            :class="isReverseColumn ? 'pl-sm-16' : 'pr-sm-16'"
+            class="containerOneChildOne col-12 col-md-7 text-left align-self-center pl-0"
           >
-            <source src="/Cause-How-it-works-v-2.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-      <div
-        class="containerOneChildTwo col-12 col-md-5 text-left align-self-center"
-      >
-        <h2 class="HowItWorks d-md-block d-none">How it Works ?</h2>
+            <div
+              class="imgContainer"
+              :data-aos="isReverseColumn ? 'fade-left' : 'fade-right'"
+              data-aos-offset="50"
+              data-aos-delay="30"
+              data-aos-duration="500"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="true"
+              data-aos-anchor-placement="top-center"
+            >
+              <video
+                id="myvid"
+                ref="vidBlock"
+                autoplay
+                loop=""
+                class="d-block"
+                width="100%"
+                preload="auto"
+                @timeupdate="onTimeUpdateListener"
+              >
+                <source src="/Cause-How-it-works-v-2.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <div
+            class="containerOneChildTwo pb-16 pt-sm-16 pt-5 col-12 col-md-5 text-left align-self-center"
+            :class="isReverseColumn ? '' : 'pl-sm-16'"
+          >
+            <h2 class="HowItWorks d-md-block d-none">How it Works ?</h2>
 
-        <div class="liwrapper">
-          <div
-            id="imageONE"
-            :class="{ active: active_el === 1 }"
-            @click="skip(0, 1)"
-          >
-            <h6>Add in seconds</h6>
-            <p>Just two clicks to install. It’s 100% free.</p>
-          </div>
-          <div
-            id="imageTWO"
-            :class="{ active: active_el === 2 }"
-            @click="skip(4, 2)"
-          >
-            <h6>Shop like normal</h6>
-            <p>
-              The Cause Button will appear when you visit a store offering free
-              donations.
-            </p>
-          </div>
-          <div
-            id="imageTHREE"
-            :class="{ active: active_el === 3 }"
-            @click="skip(11, 3)"
-          >
-            <h6>Raise money for charity</h6>
-            <p>Just two clicks to install. It’s 100% free.</p>
+            <div class="liwrapper">
+              <div
+                id="imageONE"
+                :class="{ active: active_el === 1 }"
+                @click="skip(0, 1)"
+              >
+                <h6>Add in seconds</h6>
+                <p>Just two clicks to install. It’s 100% free.</p>
+              </div>
+              <div
+                id="imageTWO"
+                :class="{ active: active_el === 2 }"
+                @click="skip(4, 2)"
+              >
+                <h6>Shop like normal</h6>
+                <p>
+                  The Cause Button will appear when you visit a store offering
+                  free donations.
+                </p>
+              </div>
+              <div
+                id="imageTHREE"
+                :class="{ active: active_el === 3 }"
+                @click="skip(11, 3)"
+              >
+                <h6>Raise money for charity</h6>
+                <p>Just two clicks to install. It’s 100% free.</p>
+              </div>
+            </div>
+            <div
+              class="col-12 text-center how-it-work-mobile mt-6 col pl-0 pr-0"
+            >
+              <i
+                class="mdi mdi-chevron-left"
+                @click="next(active_el - 1)"
+                :class="{ disabled: active_el === 1 }"
+              ></i>
+              <span class="bold black-color">{{ active_el }} / </span>3
+              <i
+                class="mdi mdi-chevron-right"
+                @click="next(active_el + 1)"
+                :class="{ disabled: active_el === 3 }"
+              ></i>
+            </div>
           </div>
         </div>
-        <div class="col-12 text-center how-it-work-mobile mt-6 col pl-0 pr-0">
-          <i
-            class="mdi mdi-chevron-left"
-            @click="next(active_el - 1)"
-            :class="{ disabled: active_el === 1 }"
-          ></i>
-          <span class="bold black-color">{{ active_el }} / </span>3
-          <i
-            class="mdi mdi-chevron-right"
-            @click="next(active_el + 1)"
-            :class="{ disabled: active_el === 3 }"
-          ></i>
-        </div>
-      </div>
-    </div>
+      </v-row>
+    </v-container>
   </div>
 </template>
 <style lang="scss" scoped>
+.howitworks-wrapper {
+  .reverse-block {
+    .containerOneChildOne {
+      // padding-right: 0px !important;
+    }
+  }
+}
 .HowItWorks {
   text-align: left;
   margin-top: 20px;
@@ -126,7 +145,7 @@
 
 .containerOneChildOne {
   @media screen and (min-width: 601px) {
-    padding-right: 100px;
+    padding-right: 0px;
   }
 }
 
@@ -342,6 +361,10 @@ export default {
     description: {
       type: String,
       default: '',
+    },
+    isReverseColumn: {
+      default: false,
+      type: Boolean,
     },
   },
   data() {

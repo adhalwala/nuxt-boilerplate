@@ -3,11 +3,14 @@ import InnerBanner from '~/components/InnerBanner.vue'
 export default {
   title: 'Components/Banner',
   component: InnerBanner,
-  // decorators: [
-  //   () => ({
-  //     template: '<v-app><v-main><story /></v-main></v-app>',
-  //   }),
-  // ],
+  argTypes: {
+    isButton: {
+      control: 'boolean',
+    },
+    isSearchButton: {
+      control: 'boolean',
+    },
+  },
 }
 
 const Template = (args, { argTypes }) => ({
@@ -23,4 +26,17 @@ InternalPageTitle.args = {
     'Shop, save and turn your purchases into donations for Australian Red Cross.',
   label: 'Shop & raise donations',
   icon: 'mdi mdi-heart',
+  isButton: true,
+  isSearchButton: false,
+}
+export const WithSearchButton = Template.bind({})
+WithSearchButton.args = {
+  bannersubtitle: 'Australian Red Cross',
+  description:
+    'Shop, save and turn your purchases into donations for Australian Red Cross.',
+  label: 'Shop & raise donations',
+  icon: 'mdi mdi-magnify',
+  isButton: false,
+  isSearchButton: true,
+  placeholder: 'Find your store',
 }

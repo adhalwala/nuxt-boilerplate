@@ -153,6 +153,7 @@
 <style lang="scss" scoped>
 .banner-slider {
   position: relative;
+  z-index: 7;
   svg {
     position: absolute;
   }
@@ -210,6 +211,9 @@
         content: '';
         background-image: url('/heart.png');
       }
+    }
+    .v-image__image--cover {
+      background-size: 100%;
     }
   }
   .heart-slider-wrapper {
@@ -278,30 +282,30 @@ export default {
     return {
       items: [
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+          src: '/RedCrossBackground.jpg',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          src: '/ShopBackground.jpg',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          src: '/RedCrossBackground.jpg',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          src: '/ShopBackground.jpg',
         },
       ],
       itemslogo: [
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+          src: '/RedCrossBackground.jpg',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          src: '/ShopBackground.jpg',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          src: '/RedCrossBackground.jpg',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          src: '/ShopBackground.jpg',
         },
       ],
     }

@@ -30,6 +30,9 @@
     font-weight: 300;
     margin-top: 15px;
   }
+  h4 {
+    font-size: 16px;
+  }
   .learn-more-btn {
     margin-top: 0px;
   }

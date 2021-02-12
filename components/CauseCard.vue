@@ -19,8 +19,8 @@
       </div>
       <h3>{{ title }}</h3>
       <span class="align-self-center">{{ description }} </span>
-      <div class="text-center col-12 align-self-end">
-        <button class="learn-more-btn" v-if="isButton">
+      <div class="text-center col-12 align-self-end" v-if="isButton">
+        <button class="learn-more-btn">
           {{ buttontext }} <v-icon>mdi-chevron-right</v-icon
           ><v-icon>mdi-chevron-double-right</v-icon>
         </button>

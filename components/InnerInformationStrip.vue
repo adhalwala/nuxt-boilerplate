@@ -1,30 +1,29 @@
 <template>
-  <v-main class="primary-dark-bg inner-page-strip cause-rating-strip">
+  <div class="primary-dark-bg inner-page-strip cause-rating-strip">
     <v-container>
       <div
         class="text-center d-flex col-12 pl-2 pr-2 pl-sm-3 pr-sm-3 pt-0 pb-0"
       >
         <v-row>
           <v-col class="text-left">
-            <span class=""> ABN 12 345 678 901 </span>
+            <span class=""> {{ infotext }} </span>
           </v-col>
-          <v-col>
-            <a href="https://www.redcross.org.au" target="_blank"
-              >www.redcross.org.au
-            </a>
+          <v-col v-if="hasUrl">
+            <a :href="weburl" target="_blank">{{ weburl }} </a>
           </v-col>
-          <v-col class="text-right">
+          <v-col class="text-right" v-if="isRate">
             <span class="oval">✔</span><span class="oval">✔</span
             ><span class="oval">✔</span>
           </v-col>
         </v-row>
       </div>
     </v-container>
-  </v-main>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .inner-page-strip {
+  min-height: 49px;
   span {
     color: #a5d6fe;
     font-family: Roboto;
@@ -62,11 +61,19 @@ export default {
   name: 'InnerInformationStrip',
 
   props: {
-    label: {
+    infotext: {
       type: String,
       default: '',
     },
-    primary: {
+    weburl: {
+      type: String,
+      default: '',
+    },
+    hasUrl: {
+      type: Boolean,
+      default: false,
+    },
+    isRate: {
       type: Boolean,
       default: false,
     },
