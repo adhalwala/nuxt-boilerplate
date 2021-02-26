@@ -68,6 +68,10 @@
       height: 82.08px;
       width: 89.13px;
     }
+    @media screen and (max-width: 600px) {
+      width: 120px;
+      height: 120px;
+    }
   }
   .shop-title {
     color: #0c1831;

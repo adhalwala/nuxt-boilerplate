@@ -3,13 +3,13 @@
     <v-col class="text-left d-flex">
       <div class="align-self-center width-full">
         <h3>{{ bannersubtitle }}</h3>
-        <p :style="{ maxWidth: maxwidth }">
+        <p v-if="description" :style="{ maxWidth: maxwidth }">
           {{ description }}
         </p>
         <my-button
           :icon="icon"
           :label="label"
-          class="text-left banner-btn float-left mb-5 mb-sm-0"
+          class="text-left banner-btn float-left relative z-index-9 mb-5 mb-sm-0"
           v-if="isButton"
         />
         <search-button

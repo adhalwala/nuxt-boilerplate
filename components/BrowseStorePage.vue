@@ -6,7 +6,7 @@
         <v-row>
           <div class="d-flex width-full">
             <inner-banner
-              class="col-12 col-sm-5 left-side-home mt-4 mt-sm-0"
+              class="col-7 col-sm-5 left-side-home mt-4 mt-sm-0"
               :isSearchButton="true"
               icon="mdi mdi-magnify"
               placeholder="Find your store"
@@ -14,7 +14,9 @@
               description="Shop, save and
             turn your purchases into donations for Australian Red Cross."
             />
-            <logos-showcase class="col-7 d-flex main-inner-banner" />
+            <logos-showcase
+              class="col-sm-7 col-5 d-flex main-inner-banner __inner_heart"
+            />
           </div>
         </v-row>
       </v-container>
@@ -25,7 +27,7 @@
       :isRate="false"
       class="col-12 pt-0 pb-0"
     />
-    <div class="width-full bg-primary relative filter-wrapper pt-1 pb-1">
+    <!-- <div class="width-full bg-primary relative filter-wrapper pt-1 pb-1">
       <v-container>
         <v-row>
           <v-col class="d-flex">
@@ -42,8 +44,8 @@
           </v-col>
         </v-row>
       </v-container>
-    </div>
-    <c-category v-show="isExist" />
+    </div> -->
+    <!-- <c-category v-show="isExist" /> -->
     <div class="d-block width-full shop-now-section pt-4 pb-15">
       <v-container class="mt-10">
         <v-col class="col-12">
@@ -57,7 +59,7 @@
                 description="Up to 3.5% donated"
                 shopbutton="Shop Now"
                 :isDarkbtn="true"
-                class="col-3 pl-5 pr-5 mb-4"
+                class="col-sm-4 col-md-3 pl-5 pr-5 mb-4"
               />
             </v-row>
           </v-row>
@@ -163,24 +165,24 @@
 
 <script>
 import MyHeader from '~/components/Header.vue'
-import CCategory from '~/components/BrowseByCategory.vue'
+// import CCategory from '~/components/BrowseByCategory.vue'
 import InnerInformationStrip from '~/components/InnerInformationStrip.vue'
 import ShopBlock from '~/components/ShopBlock.vue'
 import Footers from '~/components/Footer.vue'
 import LogosShowcase from '~/components/LogosShowcase.vue'
-import Pagination from '~/components/Pagination.vue'
+// import Pagination from '~/components/Pagination.vue'
 
 export default {
   name: 'BrowseStorePage',
 
   components: {
     MyHeader,
-    CCategory,
+    // CCategory,
     InnerInformationStrip,
     ShopBlock,
     Footers,
     LogosShowcase,
-    Pagination,
+    // Pagination,
   },
   data: () => ({
     isExist: false,

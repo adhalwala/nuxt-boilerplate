@@ -1,7 +1,7 @@
 import ShopBlock from '~/components/ShopBlock.vue'
 
 export default {
-  title: 'Components/ShopBlock',
+  title: 'Components/CardsForStore',
   component: ShopBlock,
 }
 

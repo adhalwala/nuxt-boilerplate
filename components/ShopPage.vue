@@ -6,7 +6,7 @@
         <v-row>
           <div class="relative width-full d-block">
             <inner-banner
-              class="col-6"
+              class="col-sm-6 col-12"
               :isButton="true"
               bannersubtitle="Hallenstein Brothers"
               maxwidth="387px"
@@ -20,7 +20,7 @@
       <inner-banner-image
         topimg="/cause-logo.svg"
         bgimg="/ShopBackground.jpg"
-        class="d-flex col-6 ml-auto pa-0"
+        class="d-sm-flex d-none col-6 ml-auto pa-0"
       />
     </div>
     <inner-information-strip
@@ -33,7 +33,7 @@
       <v-container>
         <v-row>
           <v-col
-            class="col-sm-6 col-12 d-flex justify-content-center justify-content-md-left"
+            class="d-none col-sm-6 col-12 d-sm-flex justify-content-center justify-content-md-left"
           >
             <img
               height="240"

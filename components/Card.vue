@@ -1,6 +1,6 @@
 <template>
   <v-col cols="6" sm="6" md="4" lg="3" xl="3" class="cta--wrapper">
-    <div class="cta--block">
+    <div class="cta--block" v-ripple>
       <div class="cta-img-wrapper">
         <div class="top-img text-center">
           <img class="" :src="topimg" />
@@ -8,7 +8,7 @@
         <img :src="imgsrc" />
         <span>{{ title }}</span>
       </div>
-      <div class="cta--action" v-ripple>
+      <div class="cta--action">
         <v-icon left class="cta-link-icon"> {{ icon }} </v-icon>
         <span class="d-flex">{{ description }}</span>
       </div>
@@ -110,7 +110,10 @@
   .cta--block {
     overflow: hidden;
     cursor: pointer;
+    transition: 0.2s;
     &:hover {
+      box-shadow: 0px 0px 10px 5px #dddddd;
+      transition: 0.2s;
       i {
         background-color: #3c76a6;
         color: #ffffff;

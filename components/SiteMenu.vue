@@ -2,38 +2,39 @@
   <div class="">
     <div class="text-right user-menu header-main">
       <div
-        class="v-btn v-btn--contained v-btn--rounded theme--light v-size--default primary-theme"
+        class="v-btn v-btn--contained ripple--logo v-btn--rounded theme--light v-size--default primary-theme"
+        v-ripple
       >
         <nav class="header__nav">
           <ul class="header__navbar menu-internal-link">
             <li class="header__item">
-              <a class="header__link">
+              <a
+                class="header__link"
+                v-if="show"
+                key="on"
+                @click="show = false"
+              >
                 <v-icon> mdi-account </v-icon>
                 <!-- Header Navigation Menu Icons -->
-                <v-icon
-                  right
-                  class="header--button"
-                  v-if="show"
-                  key="on"
-                  @click="show = false"
-                >
-                  mdi-close
-                </v-icon>
-
-                <v-icon
-                  right
-                  class="header--button"
-                  v-else
-                  key="off"
-                  @click="show = true"
-                >
-                  mdi-menu
-                </v-icon>
+                <v-icon right class="header--button"> mdi-close </v-icon>
+              </a>
+              <a
+                class="header__link"
+                v-else
+                key="off"
+                @click="show = true"
+                v-ripple
+              >
+                <v-icon> mdi-account </v-icon>
+                <!-- Header Navigation Menu Icons -->
+                <v-icon right class="header--button"> mdi-menu </v-icon>
               </a>
               <!-- Dropdown Menu -->
               <transition name="dropdown">
                 <div
                   class="dropdown__menu open-site-menu"
+                  transition="scale-transition"
+                  origin="center center"
                   v-bind:class="{ active: show }"
                   v-if="show"
                 >
@@ -112,7 +113,7 @@
   padding: 0px !important;
   list-style: none;
   display: block;
-  margin-top: 17px;
+  margin-top: 19px;
 }
 .open-site-menu .menu-internal-link li {
   width: 100%;
@@ -194,6 +195,10 @@
 </style>
 
 <style scoped lang="scss">
+.v-application .ripple--logo {
+  color: #999999 !important;
+  caret-color: #999999 !important;
+}
 .site-menu-main {
   .usermenu-primary {
     width: 85px;

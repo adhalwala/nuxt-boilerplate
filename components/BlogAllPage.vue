@@ -1,13 +1,13 @@
 <template>
   <div class="charity-page">
-    <my-header />
+    <my-header class="absolute" />
     <div class="d-block width-full bg-primary relative">
       <v-container class="charity-page-top">
         <v-row>
           <div class="relative width-full pt-12 d-block">
             <span class="tag pl-6">tag</span>
             <inner-banner
-              class="col-6"
+              class="col-sm-6 col-12"
               :isButton="false"
               maxwidth="387px"
               bannersubtitle="Featured article"
@@ -18,7 +18,7 @@
       </v-container>
       <inner-banner-image
         bgimg="/RedCrossBackground.jpg"
-        class="d-flex col-6 ml-auto pa-0"
+        class="d-sm-flex m-height-500 d-none col-6 ml-auto pa-0"
       />
     </div>
     <div
@@ -55,7 +55,7 @@
                 title="Tag 1"
                 imgsrc="ShopBackground.jpg"
                 subtitle="Euismod quis viverra nibh cras pulvinar mattis nunc."
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, consectetur adipiscing elit, sed do eiusmod tempor"
               />
             </div>
           </v-col>

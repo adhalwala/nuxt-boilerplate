@@ -11,7 +11,7 @@
           </div>
           <div class="d-flex width-full">
             <banner
-              class="col-12 col-sm-5 left-side-home mt-4 mt-sm-0"
+              class="col-12 col-sm-5 left-side-home home-main-heart-banner mt-4 mt-sm-0"
               bannertitle="Plant a tree"
               bannersubtitle="when you shop online"
               icon="mdi mdi-heart"

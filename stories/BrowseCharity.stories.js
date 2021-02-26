@@ -1,7 +1,7 @@
 import BrowseCharity from '~/components/BrowseCharity.vue'
 
 export default {
-  title: 'Components/BrowseCharity',
+  title: 'Components/CharityCategories',
   component: BrowseCharity,
 }
 

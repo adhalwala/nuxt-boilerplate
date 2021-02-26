@@ -34,10 +34,16 @@
     left: 0;
     right: 0;
     margin: auto;
-    z-index: 9;
+    z-index: 1;
     img {
       height: 166px;
       width: 166px;
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    .innerpage_topimage {
+      left: 30%;
+      right: auto;
     }
   }
 }

@@ -19,13 +19,13 @@
             :isSearchButton="true"
             icon="mdi mdi-magnify"
             maxwidth="387px"
-            placeholder="Find your store"
+            placeholder="Find your charity"
             bannersubtitle="How digital is your charity?"
             description="The Cause Report is the leading digital research program into the Australian charity sector."
           />
           <inner-banner-image
             bgimg="/cause-report.jpg"
-            class="col-6 ml-auto pa-0 pb-15"
+            class="d-sm-flex d-none col-6 m-height-500 ml-auto pa-0 pb-15"
           />
         </v-row>
       </v-container>
@@ -40,9 +40,9 @@
       <v-container>
         <v-row class="flex-sm-row-reverse">
           <heading-copy-block
-            class=""
+            class="pt-sm-0 pb-sm-0 pt-10 pb-10"
             title="Custom reports"
-            text="We research and measure the digital maturity of over 57,000 Australian charities<br/> 
+            text="We research and measure the digital maturity of <b>over 57,000 Australian charities</b><br/><br/> 
 We develop a custom digital benchmark report for each charity. Our insights and recommendations are based on the actual digital footprint of each charity across web, social media and more."
           />
           <v-col class="d-flex text-center">
@@ -52,7 +52,7 @@ We develop a custom digital benchmark report for each charity. Our insights and 
       </v-container>
     </div>
     <howit-works :isReverseColumn="true" class="mt-10 howitworks-wrapper" />
-    <div class="d-block width-full bg-primary about-section pb-16">
+    <div class="d-block width-full bg-primary about-section pb-8 pb-sm-16">
       <v-container>
         <v-row>
           <v-col class="col-12">
@@ -67,37 +67,39 @@ We develop a custom digital benchmark report for each charity. Our insights and 
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </v-col>
-          <v-col class="col-10 d-flex col ml-auto mr-auto">
-            <div class="icon-wrapper text-center">
-              <div class="icon-with-border">
-                <img src="/charity-icon.svg" />
+          <v-col class="col-12">
+            <v-col class="col-md-10 col-12 d-sm-flex col ml-auto mr-auto">
+              <div class="icon-wrapper text-center">
+                <div class="icon-with-border">
+                  <img src="/cause-report-icons/web.svg" />
+                </div>
+                <span>Web</span>
               </div>
-              <span>Web</span>
-            </div>
-            <div class="icon-wrapper text-center">
-              <div class="icon-with-border">
-                <img src="/charity-icon.svg" />
+              <div class="icon-wrapper text-center">
+                <div class="icon-with-border">
+                  <img src="/cause-report-icons/social.svg" />
+                </div>
+                <span>Social</span>
               </div>
-              <span>Social</span>
-            </div>
-            <div class="icon-wrapper text-center">
-              <div class="icon-with-border">
-                <img src="/charity-icon.svg" />
+              <div class="icon-wrapper text-center">
+                <div class="icon-with-border">
+                  <img src="/cause-report-icons/Content.svg" />
+                </div>
+                <span>Content</span>
               </div>
-              <span>Content</span>
-            </div>
-            <div class="icon-wrapper text-center">
-              <div class="icon-with-border">
-                <img src="/charity-icon.svg" />
+              <div class="icon-wrapper text-center">
+                <div class="icon-with-border">
+                  <img src="/cause-report-icons/Fundraising.svg" />
+                </div>
+                <span>Fundraising</span>
               </div>
-              <span>Fundraising</span>
-            </div>
-            <div class="icon-wrapper text-center">
-              <div class="icon-with-border">
-                <img src="/charity-icon.svg" />
+              <div class="icon-wrapper text-center">
+                <div class="icon-with-border">
+                  <img src="/cause-report-icons/Security.svg" />
+                </div>
+                <span>Security</span>
               </div>
-              <span>Security</span>
-            </div>
+            </v-col>
           </v-col>
         </v-row>
       </v-container>
@@ -122,7 +124,7 @@ We develop a custom digital benchmark report for each charity. Our insights and 
             description="We are a for-purpose social enterprise. Our partners help us cover our operating expenses. "
           />
           <couse-card
-            imgsrc="/privacy-icon.svg"
+            imgsrc="/cause-report-icons/free.svg"
             title="100%  for Free"
             description="All our insights, tools and resources are free for charities. Forever. "
           />
@@ -141,7 +143,7 @@ We develop a custom digital benchmark report for each charity. Our insights and 
       <search-button
         class="ml-auto mr-auto mt-10"
         icon="mdi mdi-magnify"
-        placeholder="Find your store"
+        placeholder="Find your charity"
       />
     </div>
     <footers class="" />
@@ -215,8 +217,8 @@ We develop a custom digital benchmark report for each charity. Our insights and 
 }
 @media screen and (max-width: 600px) {
   .charity-wrapper {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .banner-slider {

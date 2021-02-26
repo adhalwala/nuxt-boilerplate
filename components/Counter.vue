@@ -61,6 +61,15 @@
 .counter-wrape.counter-text-wrapper:first-child {
   border-left: none;
 }
+@media screen and (max-width: 900px) {
+  .counter-wrape.counter-text-wrapper {
+    border-bottom: 2px solid #a5d6fe;
+    border-left: 0px;
+  }
+  .counter-wrape.counter-text-wrapper:last-child {
+    border-bottom: none;
+  }
+}
 .counter-wrape {
   @media screen and (max-width: 600px) {
     &.counter-text-wrapper {

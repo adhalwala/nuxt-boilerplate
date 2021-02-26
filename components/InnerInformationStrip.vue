@@ -5,13 +5,16 @@
         class="text-center d-flex col-12 pl-2 pr-2 pl-sm-3 pr-sm-3 pt-0 pb-0"
       >
         <v-row>
-          <v-col class="text-left">
+          <v-col class="text-center text-sm-left col-sm-4 col-12">
             <span class=""> {{ infotext }} </span>
           </v-col>
-          <v-col v-if="hasUrl">
+          <v-col v-if="hasUrl" class="col-sm-4 col-12">
             <a :href="weburl" target="_blank">{{ weburl }} </a>
           </v-col>
-          <v-col class="text-right" v-if="isRate">
+          <v-col
+            class="text-sm-right text-center col-sm-4 col-12"
+            v-if="isRate"
+          >
             <span class="oval">✔</span><span class="oval">✔</span
             ><span class="oval">✔</span>
           </v-col>
@@ -51,6 +54,10 @@
     line-height: 20px;
     margin-left: 20px;
     background-color: #aacb5e;
+    @media screen and (max-width: 600px) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   }
 }
 </style>

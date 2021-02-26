@@ -6,7 +6,7 @@
         <v-row>
           <div class="relative width-full d-block">
             <inner-banner
-              class="col-6"
+              class="col-sm-6 col-12"
               :isButton="true"
               bannersubtitle="Australian Red Cross"
               maxwidth="387px"
@@ -20,7 +20,7 @@
       <inner-banner-image
         topimg="/cause-logo.svg"
         bgimg="/RedCrossBackground.jpg"
-        class="d-flex col-6 ml-auto pa-0"
+        class="d-sm-flex d-none col-6 ml-auto pa-0"
       />
     </div>
     <inner-information-strip
@@ -30,13 +30,15 @@
       :isRate="true"
       class="col-12 pt-0 pb-0"
     />
-    <div class="d-block width-full bg-primary about-section pb-15">
+    <div
+      class="d-block width-full bg-primary about-section pb-sm-15 pt-12 pb-10"
+    >
       <v-container>
         <v-row>
-          <v-col class="col-7 d-flex pl-sm-15">
-            <img class="align-self-center pl-sm-15" src="/about-logo.svg" />
+          <v-col class="col-sm-7 col-12 d-flex justify-center">
+            <img class="align-self-center" src="/about-logo.svg" />
           </v-col>
-          <v-col class="col-5">
+          <v-col class="col-sm-5">
             <h2>About</h2>
             <p>
               We research and measure the digital maturity of
@@ -64,11 +66,13 @@
                 description="Up to 3.5% donated"
                 shopbutton="Shop Now"
                 :isLightbtn="true"
-                class="col-3 pl-5 pr-5 mb-4"
+                class="col-sm-4 col-md-3 pl-5 pr-5 mb-4 col-12"
               />
-              <button class="learn-more-btn ml-auto mr-auto mt-4">
-                Load More <v-icon>mdi-chevron-down</v-icon>
-              </button>
+              <v-col cols="12" class="text-center">
+                <button class="learn-more-btn ml-auto mr-auto mt-2">
+                  Load More <v-icon>mdi-chevron-down</v-icon>
+                </button>
+              </v-col>
             </v-row>
           </v-row>
         </v-col>

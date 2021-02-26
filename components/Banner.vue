@@ -9,12 +9,7 @@
           height="auto"
           :show-arrows="false"
         >
-          <v-carousel-item
-            v-for="(item, i) in bannertitle"
-            :key="i"
-            reverse-transition="slide-fade"
-            transition="slide-fade"
-          >
+          <v-carousel-item v-for="(item, i) in bannertitle" :key="i">
             <h2>{{ item.name }}</h2>
           </v-carousel-item>
         </v-carousel>
@@ -112,10 +107,9 @@ export default {
       default: '',
       type: String,
     },
-  },
-  data() {
-    return {
-      bannertitle: [
+    bannertitle: {
+      type: Array,
+      default: () => [
         {
           name: 'Plant a Tree',
         },
@@ -129,7 +123,10 @@ export default {
           name: 'Build a School',
         },
       ],
-    }
+    },
+  },
+  data() {
+    return {}
   },
 }
 </script>

@@ -7,7 +7,7 @@
           <div class="relative width-full d-block">
             <span class="tag pl-6">tag</span>
             <heading-h1-alt
-              class="c-heading black--text ma-0 d-flex pt-4 pb-4 pl-5"
+              class="c-heading black--text ma-0 d-flex pt-1 pb-4 pl-5"
               text="Blog page title"
             />
             <v-col class="user-detail d-flex width-full pl-5 mt-2">
@@ -29,7 +29,7 @@
       </v-container>
       <inner-banner-image
         bgimg="/RedCrossBackground.jpg"
-        class="d-flex col-6 ml-auto pa-0"
+        class="d-sm-flex d-none m-height-500 col-6 ml-auto pa-0"
       />
     </div>
     <inner-information-strip
@@ -40,9 +40,9 @@
     <div class="blog-detail-info pt-15 pb-15 mt-5">
       <v-container>
         <v-row>
-          <v-col class="col-2"> </v-col>
-          <v-col class="col-8">
-            <p class="first-capital">
+          <v-col class="col-2 d-none d-md-flex"> </v-col>
+          <v-col class="col-12 col-md-8 pl-md-10 ml-auto mr-auto">
+            <p class="first-capital mb-10">
               Arem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi
               blandit cursus risus at ultrices mi tempus imperdiet. Velit ut
@@ -88,12 +88,12 @@
               congue mauris. Molestie nunc non blandit massa enim nec dui nunc.
             </p>
           </v-col>
-          <v-col class="col-2"> </v-col>
+          <v-col class="col-2 d-none d-md-flex"> </v-col>
         </v-row>
 
         <v-row>
-          <v-col class="col-2">
-            <i class="mdi mdi-heart mt-4"></i>
+          <v-col class="col-2 mt-15 d-none d-md-block">
+            <i class="mdi mdi-heart mt-md-4"></i>
             <h6>Extract or tip</h6>
             <span>
               Semper quis lectus nulla at volutpat diam ut venenatis.
@@ -101,9 +101,9 @@
               eros in cursus turpis massa tincidunt dui.
             </span>
           </v-col>
-          <v-col class="col-8">
+          <v-col class="col-12 col-md-8 pl-md-10 ml-auto mr-auto">
             <heading-h1-alt
-              class="c-heading black--text ma-0 d-flex pt-4 pb-4"
+              class="c-heading black--text ma-0 mb-5 d-flex pt-4 pb-4"
               text="Image / video block"
             />
             <img
@@ -137,7 +137,7 @@
               scelerisque viverra mauris in aliquam sem fringilla. Praesent
             </p>
           </v-col>
-          <v-col class="col-2"> </v-col>
+          <v-col class="col-2 d-none d-md-flex"> </v-col>
         </v-row>
       </v-container>
     </div>
@@ -152,7 +152,7 @@
         <v-row>
           <v-col
             class="col-sm-6 col-md-4 col-12"
-            v-for="(item, i) in 6"
+            v-for="(item, i) in 3"
             :key="i"
           >
             <div class="pl-3 pr-3 mb-4">

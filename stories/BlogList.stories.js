@@ -1,14 +1,14 @@
-import BlogList from '~/components/BlogList.vue'
+import CardBlog from '~/components/BlogList.vue'
 
 export default {
-  title: 'Components/BlogList',
-  component: BlogList,
+  title: 'Components/CardBlog',
+  component: CardBlog,
 }
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { BlogList },
-  template: '<blog-list v-bind="$props" />',
+  components: { CardBlog },
+  template: '<card-blog v-bind="$props" />',
 })
 
 export const Default = Template.bind({})

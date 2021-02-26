@@ -1,5 +1,5 @@
 <template>
-  <p class="c-heading black--text">{{ text }}</p>
+  <p class="c-heading black--text" v-html="text"></p>
 </template>
 <style scoped>
 .c-heading {

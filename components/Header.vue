@@ -19,7 +19,10 @@
   left: 0;
   top: 0;
   .site-logo {
-    z-index: 9;
+    z-index: 1;
+    position: relative;
+  }
+  @media screen and (max-width: 600px) {
     position: relative;
   }
 }

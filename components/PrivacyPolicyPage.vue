@@ -12,10 +12,10 @@
         </v-row>
       </v-container>
     </div>
-    <div class="d-block width-full bg-primary relative">
+    <div class="d-block width-full pt-sm-8 pt-4 relative">
       <v-container class="">
         <v-row>
-          <div class="relative width-full d-block">
+          <div class="relative width-full d-block privacy-title">
             <inner-banner
               class="col-12"
               :isButton="false"
@@ -26,41 +26,42 @@
       </v-container>
     </div>
     <div
-      class="primary-dark-bg inner-page-strip cause-rating-strip recent-tag-wrapper no-border privacy-breadcum"
+      class="inner-page-strip cause-rating-strip recent-tag-wrapper no-border privacy-breadcum"
     >
       <v-container>
-        <div
-          class="text-center d-flex col-12 pl-2 pr-2 pl-sm-3 pr-sm-3 pt-0 pb-0"
-        >
+        <div class="text-center d-flex col-12 pl-sm-3 pr-sm-3 pt-0 pb-0">
           <v-row>
-            <v-col class="d-flex text-left">
-              <h6 class="">Published 31st March 2020 (V1)</h6>
+            <v-col class="d-flex text-left pt-0">
+              <h6 class="color-black">Published 31st March 2020 (V1)</h6>
             </v-col>
           </v-row>
         </div>
       </v-container>
     </div>
-    <div class="d-block width-full about-section pt-10 pb-15 mb-10">
+    <div class="d-block width-full about-section pt-1 pb-sm-15 mb-s-10 pb-0">
       <v-container>
         <v-row>
-          <v-col class="col-md-10">
-            <p class="mb-10">
-              Cause is bound by privacy principles and various legislation that
-              applies in relation to any Personal Information collected by
-              Cause. This document outlines Cause’s policy for the protection of
-              Personal Information collected in accordance with the Act.
-            </p>
-            <c-accordion
-              v-for="(item, i) in 5"
-              :key="i"
-              :number="i"
-              title="Defination"
-              description="Cause will only disclose your Personal Information to a third party in the following circumstances:
+          <v-col class="col-12">
+            <v-col class="col-md-10">
+              <p class="mb-10">
+                Cause is bound by privacy principles and various legislation
+                that applies in relation to any Personal Information collected
+                by Cause. This document outlines Cause’s policy for the
+                protection of Personal Information collected in accordance with
+                the Act.
+              </p>
+              <c-accordion
+                v-for="(item, i) in 5"
+                :key="i"
+                :number="i"
+                title="Defination"
+                description="Cause will only disclose your Personal Information to a third party in the following circumstances:
 1. To any third party organisation for any authorised purpose;
 2. To your representative with your consent, which may be given in writing, verbal or implied from your conduct or as nominated by you as your executor, trustee or legal representative. We will take reasonable steps to ensure that your representative undertakes to protect your privacy; and/or
 3. To Cause’s accountants and legal advisors, information technology service provider, financial institution, law enforcement agency or government authorities as reasonably required.
 Your Personal Information will not be shared, sold, rented or disclosed other than as described in this Privacy Policy."
-            />
+              />
+            </v-col>
           </v-col>
         </v-row>
       </v-container>

@@ -6,14 +6,14 @@
     <v-card class="pa-2 d-flex row text-center" dark>
       <div
         class="text-center col-12"
-        data-aos="fade-in"
+        data-aos="fade-up"
         data-aos-offset="10"
         data-aos-delay="30"
         data-aos-duration="500"
         data-aos-easing="ease-in-out"
         data-aos-mirror="true"
         data-aos-once="true"
-        data-aos-anchor-placement="top-center"
+        data-aos-anchor-placement="top-bottom"
       >
         <img :src="imgsrc" />
       </div>

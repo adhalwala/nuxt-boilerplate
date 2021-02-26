@@ -6,14 +6,16 @@
         <v-row>
           <div class="d-flex width-full">
             <inner-banner
-              class="col-12 col-sm-5 left-side-home mt-4 mt-sm-0"
+              class="col-7 col-sm-5 left-side-home mt-4 mt-sm-0"
               :isSearchButton="true"
               icon="mdi mdi-magnify"
               placeholder="Find your store"
               bannersubtitle="Great Causes to support"
               description="Raise money for these great Causes when you shop online."
             />
-            <logos-showcase class="col-7 d-flex main-inner-banner" />
+            <logos-showcase
+              class="col-5 col-sm-7 d-flex main-inner-banner __inner_heart"
+            />
           </div>
         </v-row>
       </v-container>
@@ -72,7 +74,7 @@
                 description="Up to 3.5% donated"
                 shopbutton="Learn more"
                 :isLightbtn="true"
-                class="col-3 pl-5 pr-5 mb-4"
+                class="col-12 col-sm-6 col-md-3 pl-5 pr-5 mb-4"
               />
               <shop-block
                 v-for="(items, i) in 4"
@@ -82,7 +84,7 @@
                 description="Up to 3.5% donated"
                 shopbutton="Learn more"
                 :isLightbtn="true"
-                class="col-3 pl-5 pr-5 mb-4"
+                class="col-12 col-sm-6 col-md-3 pl-5 pr-5 mb-4"
               />
             </v-row>
           </v-row>

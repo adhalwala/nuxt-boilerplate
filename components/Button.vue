@@ -4,8 +4,8 @@
       class="primary-theme button--ripple"
       :class="size"
       :rounded="true"
-      v-ripple
-      ><i style="" :class="icon"></i>
+      v-ripple="{ class: 'ripple-class' }"
+      ><i style="" class="mr-3 ml-n2" :class="icon"></i>
       {{ label }}
     </v-btn>
   </div>
@@ -24,14 +24,27 @@
   font-size: 20px !important;
   margin-right: 10px !important;
 }
+.ripple-class {
+  color: #2d597d !important;
+  caret-color: #2d597d !important;
+}
 </style>
 <style lang="scss" scoped>
+.c-primary-btn {
+  position: relative;
+  z-index: 1;
+}
 .banner-btn {
   i {
     color: #ffffff !important;
     margin-right: 5px;
-    left: -10px;
+    // left: -10px;
     position: relative;
+    font-size: 26px;
+  }
+}
+.c-primary-btn {
+  i {
     font-size: 26px;
   }
 }

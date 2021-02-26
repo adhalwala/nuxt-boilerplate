@@ -11,16 +11,11 @@
         class="heart-slider"
         hide-delimiters
         cycle
-        height="514"
+        height="100%"
         :show-arrows="false"
       >
-        <v-carousel-item
-          v-for="(item, i) in items"
-          :key="i"
-          :src="item.src"
-          reverse-transition="slide-fade"
-          transition="slide-fade"
-        >
+        <v-carousel-item v-for="(item, i) in bannerimage" :key="i">
+          <img class="main-heart-slider" :src="item.src" />
         </v-carousel-item>
       </v-carousel>
 
@@ -28,21 +23,16 @@
     </div>
     <v-carousel
       class="sliderlogo"
-      height="auto"
+      height="100%"
       hide-delimiters
       cycle
       :show-arrows="false"
     >
-      <v-carousel-item
-        v-for="(item, i) in itemslogo"
-        :key="i"
-        :src="item.src"
-        reverse-transition="slide-fade"
-        transition="slide-fade"
-      >
+      <v-carousel-item v-for="(item, i) in itemslogo" :key="i">
+        <img :src="item.src" />
       </v-carousel-item>
     </v-carousel>
-    <svg>
+    <!-- <svg>
       <defs>
         <style>
           .cls-1 {
@@ -60,7 +50,7 @@
           d="M1,0.307 C0.993,0.427,0.943,0.504,0.91,0.555 C0.784,0.739,0.5,1,0.5,1 S0.217,0.739,0.09,0.555 C0.057,0.504,0.007,0.427,0,0.307 C0,0.137,0.128,0,0.285,0 C0.371,0,0.448,0.041,0.5,0.105 C0.552,0.041,0.629,0,0.714,0 C0.872,0,1,0.138,1,0.307"
         />
       </clipPath>
-    </svg>
+    </svg> -->
     <!-- <svg
       id="mask"
       data-name="Layer 1"
@@ -135,8 +125,8 @@
 .sliderlogo .v-image__image--cover,
 .sliderlogo .v-window__container,
 .sliderlogo .v-image {
-  width: 100%;
-  height: 100% !important;
+  /* width: 100%; */
+  /* height: 100% !important; */
 }
 .sliderlogo:hover {
   transform: scale(1.2);
@@ -149,6 +139,14 @@
   transition: 0.2s;
   -webkit-transition: 0.2s;
 }
+.sliderlogo .v-responsive__content {
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+}
+.sliderlogo .v-responsive__content img {
+  width: 100%;
+}
 </style>
 <style lang="scss" scoped>
 .banner-slider {
@@ -156,6 +154,12 @@
   z-index: 7;
   svg {
     position: absolute;
+  }
+  .main-heart-slider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
   .sliderlogo {
     height: 125px;
@@ -278,37 +282,44 @@
 <script>
 export default {
   name: 'BannerImage',
+  props: {
+    bannerimage: {
+      type: Array,
+      default: () => [
+        {
+          src: '/RedCrossBackground.jpg',
+        },
+        {
+          src: '/ShopBackground.jpg',
+        },
+        {
+          src: '/RedCrossBackground.jpg',
+        },
+        {
+          src: '/ShopBackground.jpg',
+        },
+      ],
+    },
+    itemslogo: {
+      type: Array,
+      default: () => [
+        {
+          src: '/cause-logo.svg',
+        },
+        {
+          src: '/cause-logo.svg',
+        },
+        {
+          src: '/cause-logo.svg',
+        },
+        {
+          src: '/cause-logo.svg',
+        },
+      ],
+    },
+  },
   data() {
-    return {
-      items: [
-        {
-          src: '/RedCrossBackground.jpg',
-        },
-        {
-          src: '/ShopBackground.jpg',
-        },
-        {
-          src: '/RedCrossBackground.jpg',
-        },
-        {
-          src: '/ShopBackground.jpg',
-        },
-      ],
-      itemslogo: [
-        {
-          src: '/RedCrossBackground.jpg',
-        },
-        {
-          src: '/ShopBackground.jpg',
-        },
-        {
-          src: '/RedCrossBackground.jpg',
-        },
-        {
-          src: '/ShopBackground.jpg',
-        },
-      ],
-    }
+    return {}
   },
 }
 </script>

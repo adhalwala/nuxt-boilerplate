@@ -1,19 +1,25 @@
 <template>
   <div class="c-pagination">
     <ul>
-      <li>
+      <li class="ripple_c" v-ripple>
         <i class="mdi mdi-chevron-double-left"></i>
       </li>
-      <li>1</li>
+      <li class="ripple_c" v-ripple>1</li>
       <li class="active">2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li><i class="mdi mdi-chevron-double-right"></i></li>
+      <li class="ripple_c" v-ripple>3</li>
+      <li class="ripple_c" v-ripple>4</li>
+      <li class="ripple_c" v-ripple>5</li>
+      <li class="ripple_c" v-ripple>
+        <i class="mdi mdi-chevron-double-right"></i>
+      </li>
     </ul>
   </div>
 </template>
 <style lang="scss" scoped>
+.v-application .ripple_c {
+  // color: #ffffff !important;
+  caret-color: #0c1831 !important;
+}
 .c-pagination {
   ul {
     list-style: none;

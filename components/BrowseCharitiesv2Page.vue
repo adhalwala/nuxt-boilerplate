@@ -6,14 +6,16 @@
         <v-row>
           <div class="d-flex width-full">
             <inner-banner
-              class="col-12 col-sm-5 left-side-home mt-4 mt-sm-0"
+              class="col-7 col-sm-5 left-side-home mt-4 mt-sm-0"
               :isSearchButton="true"
               icon="mdi mdi-magnify"
               placeholder="Find your store"
               bannersubtitle="Great Causes to support"
               description="Raise money for these great Causes when you shop online."
             />
-            <logos-showcase class="col-7 d-flex main-inner-banner" />
+            <logos-showcase
+              class="col-5 col-sm-7 d-flex main-inner-banner __inner_heart"
+            />
           </div>
         </v-row>
       </v-container>
@@ -24,39 +26,34 @@
       :isRate="false"
       class="col-12 pt-0 pb-0"
     />
-    <div class="d-block width-full shop-now-section pt-4 pb-15">
-      <v-container class="mt-10">
+    <div class="d-block width-full shop-now-section pt-4 pb-sm-15 pb-1">
+      <v-container class="mt-1 mt-sm-10">
         <v-col class="col-12">
           <v-row>
-            <h2 class="mr-auto col-12 d-flex text-left mb-10">
+            <h2 class="mr-auto col-12 d-flex text-left mb-sm-10 mb-3">
               Browse charity categories
             </h2>
             <v-row>
               <v-col
                 class="col-sm-4 col-md-3 col-12 pl-6 pr-6"
-                v-for="(item, i) in 4"
+                v-for="(item, i) in charity_category"
                 :key="i"
               >
-                <browse-charity
-                  imgsrc="/charity-icon.svg"
-                  name="Employment and professional associations
-
-"
-                />
+                <browse-charity :imgsrc="item.src" :name="item.name" />
               </v-col>
-              <v-col
+              <!-- <v-col
                 class="col-sm-4 col-md-3 col-12 pl-6 pr-6"
                 v-for="(item, i) in 4"
                 :key="i"
               >
                 <browse-charity imgsrc="/charity-icon.svg" name="Animal" />
-              </v-col>
+              </v-col> -->
             </v-row>
           </v-row>
         </v-col>
       </v-container>
     </div>
-    <div class="d-block width-full shop-now-section pt-0 mb-10 pb-15">
+    <div class="d-block width-full shop-now-section pt-0 mb-10 pb-sm-15 pb-0">
       <v-container class="mt-8">
         <v-col class="col-12">
           <v-row>
@@ -73,7 +70,7 @@
                 description="Up to 3.5% donated"
                 shopbutton="Learn more"
                 :isLightbtn="true"
-                class="col-3 pl-5 pr-5 mb-4"
+                class="col-sm-3 col-md-4 col-12 pl-5 pr-5 mb-4"
               />
               <shop-block
                 v-for="(item, i) in 4"
@@ -83,7 +80,7 @@
                 description="Up to 3.5% donated"
                 shopbutton="Learn more"
                 :isLightbtn="true"
-                class="col-3 pl-5 pr-5 mb-4"
+                class="col-sm-3 col-md-4 col-12 pl-5 pr-5 mb-4"
               />
 
               <v-col cols="auto" class="ml-auto">
@@ -211,6 +208,84 @@ export default {
     LogosShowcase,
     BrowseCharity,
     Pagination,
+  },
+  data() {
+    return {
+      charity_category: [
+        {
+          src: '/category-icons/Animals.svg',
+          name: 'Animal',
+        },
+        {
+          src: '/category-icons/Arts.svg',
+          name: 'Arts and culture',
+        },
+        {
+          src: '/category-icons/ChildrenSupport.svg',
+          name: 'Children and youth development',
+        },
+        {
+          src: '/category-icons/Crime.svg',
+          name: 'Crime prevention and justice',
+        },
+        {
+          src: '/category-icons/Disaster.svg',
+          name: 'Disaster relief',
+        },
+        {
+          src: '/category-icons/Employment.svg',
+          name: 'Employment and professional associations',
+        },
+        {
+          src: '/category-icons/Environment.svg',
+          name: 'Environment',
+        },
+        {
+          src: '/category-icons/Health.svg',
+          name: 'Health and medicine',
+        },
+        {
+          src: '/category-icons/Housing.svg',
+          name: 'Housing, homelessness and hunger',
+        },
+        {
+          src: '/category-icons/Human.svg',
+          name: 'Human services',
+        },
+        {
+          src: '/category-icons/International.svg',
+          name: 'International',
+        },
+        {
+          src: '/category-icons/Health.svg',
+          name: 'Military and veterans',
+        },
+        {
+          src: '/category-icons/Grants.svg',
+          name: 'Philanthropy, grants, other',
+        },
+        {
+          src: '/category-icons/Health.svg',
+          name: 'Religion and spirituality',
+        },
+        {
+          src: '/category-icons/Environment.svg',
+          name: 'Schools and education',
+        },
+        {
+          src: '/category-icons/Health.svg',
+          name: 'Science and research',
+        },
+        {
+          src: '/category-icons/Comunities.svg',
+          name: 'Society and communities',
+        },
+        {
+          src: '/category-icons/Sport.svg',
+          name: 'Sports and recreation',
+        },
+      ],
+    }
   },
 }
 </script>

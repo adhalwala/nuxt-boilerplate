@@ -33,9 +33,10 @@
   text-align: center;
   background: #3c76a6;
   display: block;
-  padding: 0 10px;
+  padding: 0 15px;
   min-height: 55px;
   justify-content: center;
+  word-break: break-word;
 }
 .browse-charity-wrapper .v-image {
   background-color: #f3f9ff;

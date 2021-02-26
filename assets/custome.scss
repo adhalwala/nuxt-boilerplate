@@ -1,14 +1,14 @@
+@media (min-width: 1264px) {
+  .container {
+    max-width: 1150px !important;
+  }
+}
 @media (min-width: 1904px) {
   .container {
     max-width: 1390px !important;
   }
   .banner-wrapper p {
     width: 430px;
-  }
-}
-@media (min-width: 1264px) {
-  .container {
-    max-width: 1150px !important;
   }
 }
 .color-black {
@@ -19,6 +19,12 @@
 }
 .bg-primary {
   background-color: #f3f9ff;
+}
+.z-index-9 {
+  z-index: 9;
+}
+.absolute {
+  position: absolute;
 }
 @media (min-width: 1264px) {
   .container {
@@ -36,6 +42,11 @@
   //   max-height: 96% !important;
   //   background-color: #24324e !important;
   // }
+  .privacy-title {
+    .banner-wrapper {
+      min-height: auto;
+    }
+  }
 }
 .font-medium {
   color: #ffffff;
@@ -71,6 +82,15 @@
     transform: translate(0, -50%);
     left: 0;
     right: 0;
+    @media screen and (max-width: 600px) {
+      position: relative;
+      top: auto;
+      height: auto;
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+      left: 0;
+      right: 0;
+    }
   }
   .about-section {
     padding-top: 89px;
@@ -93,6 +113,9 @@
       strong {
         font-weight: 500;
       }
+    }
+    @media screen and (max-width: 600px) {
+      padding-top: 45px;
     }
   }
   .shop-now-section {
@@ -202,6 +225,9 @@
   font-weight: 300;
   letter-spacing: 0.5px;
   line-height: 28px;
+  strong {
+    font-weight: 600;
+  }
 }
 .heading-3 {
   color: #0c1831;
@@ -223,7 +249,7 @@
   }
   &.getting-started {
     h2 {
-      font-size: 32px;
+      font-size: 28px;
     }
   }
   p {
@@ -251,6 +277,9 @@
   border-bottom: 3px solid #a8b6c4;
   &.privacy-breadcum {
     border: 0px;
+    h6 {
+      color: #000000;
+    }
   }
   h6 {
     color: #ffffff;
@@ -317,12 +346,12 @@
     border-radius: 100%;
     object-fit: cover;
     object-position: center center;
-    border: 2px solid #ffffff;
+    border: 2.2px solid #ffffff;
   }
   h6 {
     color: #333333;
     font-family: Roboto;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.39px;
     line-height: 33px;
@@ -354,7 +383,7 @@
 }
 .related-article {
   .v-card__title {
-    color: #e30c00 !important;
+    // color: #e30c00 !important;
   }
 }
 .blog-detail-info {
@@ -384,7 +413,7 @@
     font-family: Roboto;
     font-size: 16px;
     font-weight: 300;
-    letter-spacing: 1.88px;
+    letter-spacing: 1px;
     line-height: 28px;
     &.first-capital {
       &:first-letter {
@@ -454,13 +483,13 @@
   .icon-with-border {
     width: 82px;
     height: 82px;
-    border: 2.2px dashed #3c76a6;
+    // border: 2.2px dashed #3c76a6;
     border-radius: 100%;
     align-self: center;
     display: flex;
     margin: auto;
     img {
-      width: 46px;
+      // width: 46px;
       margin: auto;
     }
   }
@@ -475,6 +504,15 @@
     margin-top: 20px;
     display: block;
   }
+  @media screen and (max-width: 600px) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 30px;
+    span {
+      margin-top: 10px;
+    }
+  }
 }
 .about-postion {
   position: absolute;
@@ -483,6 +521,13 @@
   right: 0;
   margin: auto;
   left: 0;
+}
+.howitworks-wrapper {
+  @media screen and (min-width: 1920px) {
+    max-width: 1390px;
+    margin: auto;
+    position: relative;
+  }
 }
 .reverse-block {
   @media screen and (min-width: 769px) {
@@ -496,5 +541,78 @@
         right: auto;
       }
     }
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 960px) {
+  .reverse-block.left-to-right .containerOneChildOne {
+    position: relative;
+    width: 50%;
+    float: left;
+    padding-right: 20px !important;
+  }
+  .reverse-block.right-to-left .containerOneChildOne {
+    position: relative;
+    width: 50%;
+    float: right;
+    padding-right: 20px !important;
+  }
+  .reverse-block.right-to-left .containerOneChildTwo {
+    width: 50%;
+    max-width: 50%;
+    float: left;
+    padding-top: 0 !important;
+    padding-left: 20px !important;
+    padding-bottom: 0px !important;
+  }
+  .reverse-block.left-to-right .containerOneChildTwo {
+    width: 50%;
+    max-width: 50%;
+    float: left;
+    padding-top: 0 !important;
+    padding-left: 20px !important;
+    padding-bottom: 0px !important;
+  }
+}
+.m-height-500 {
+  min-height: 500px;
+}
+.innerpage_banner {
+  img {
+    object-fit: cover;
+    object-position: center center;
+    height: 100%;
+  }
+}
+
+// responsive css
+@media screen and (max-width: 959px) and (min-width: 600px) {
+  .main-inner-banner {
+    min-height: 500px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .charity-page-top,
+  .charity-page {
+    .banner-wrapper {
+      min-height: auto;
+    }
+    .banner-wrapper p {
+      width: 100% !important;
+    }
+  }
+  .sliderlogo .v-responsive__content {
+    padding: 10px;
+  }
+  .home-main-heart-banner.left-side-home {
+    .v-carousel,
+    h3,
+    p {
+      width: 200px !important;
+    }
+  }
+  .__inner_heart {
+    top: -100px !important;
+    transform: scale(0.6) !important;
+    right: 60px !important;
   }
 }

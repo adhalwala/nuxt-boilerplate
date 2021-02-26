@@ -6,7 +6,11 @@
     <v-container>
       <v-row class="">
         <div
-          :class="isReverseColumn ? 'flex-sm-row-reverse' : 'left-to-right'"
+          :class="
+            isReverseColumn
+              ? 'flex-sm-row-reverse right-to-left'
+              : 'left-to-right'
+          "
           class="gridContainer width-full d-md-flex reverse-block d-inline-block align-self-center"
         >
           <v-col class="col-md-7"> </v-col>
@@ -17,13 +21,13 @@
             <div
               class="imgContainer"
               :data-aos="isReverseColumn ? 'fade-left' : 'fade-right'"
-              data-aos-offset="50"
-              data-aos-delay="30"
-              data-aos-duration="500"
+              data-aos-offset="0"
+              data-aos-delay="0"
+              data-aos-duration="100"
               data-aos-easing="ease-in-out"
               data-aos-mirror="true"
               data-aos-once="true"
-              data-aos-anchor-placement="top-center"
+              data-aos-anchor-placement="top-bottom"
             >
               <video
                 id="myvid"
@@ -113,6 +117,7 @@
   letter-spacing: 0.5px;
   line-height: 45px;
   margin-bottom: 42px;
+
   @media screen and (max-width: 600px) {
     font-family: Roboto;
     font-size: 20px;
@@ -131,7 +136,7 @@
   // min-height: 600px;
   padding-top: 80px;
   padding-bottom: 100px;
-  @media screen and (max-width: 1200px) and (min-width: 960px) {
+  @media screen and (max-width: 1200px) {
     padding-top: 0px;
     padding-bottom: 50px;
   }

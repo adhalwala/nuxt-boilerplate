@@ -8,7 +8,9 @@
       {{ subtitle }}
     </v-card-subtitle>
     <v-card-text>
-      {{ text }}
+      <p>
+        {{ text }}
+      </p>
     </v-card-text>
   </v-card>
 </template>
@@ -39,13 +41,20 @@
   letter-spacing: 0;
   line-height: 28px;
 }
-.bloglist .v-card__text {
+.bloglist .v-card__text p {
   color: #333333 !important;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 0.31px;
   line-height: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  margin-top: 0px;
 }
 </style>
 <script>

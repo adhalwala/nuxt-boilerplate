@@ -1,12 +1,12 @@
 <template>
   <div class="charity-page shop-page">
-    <my-header />
+    <my-header class="absolute" />
     <div class="d-block width-full bg-primary relative">
       <v-container class="charity-page-top">
         <v-row>
           <div class="relative width-full d-block">
             <inner-banner
-              class="col-6"
+              class="col-sm-6 col-12"
               :isButton="false"
               bannersubtitle="Raise money for charity when you shop online."
             />
@@ -15,7 +15,7 @@
       </v-container>
       <inner-banner-image
         bgimg="RedCrossBackground.jpg"
-        class="d-flex col-6 ml-auto pa-0"
+        class="d-sm-flex m-height-500 d-none col-6 ml-auto pa-0"
       />
     </div>
     <inner-information-strip
@@ -28,9 +28,7 @@
     >
       <v-container>
         <v-row>
-          <v-col
-            class="col-sm-5 col-12 justify-sm-left justify-center d-flex offset-sm-1"
-          >
+          <v-col class="col-sm-6 col-12 justify-sm-left justify-center d-flex">
             <img class="align-self-center" src="/about-logo.svg" />
           </v-col>
           <v-col class="col-sm-6 col-12 pl-sm-12">
@@ -47,57 +45,56 @@
     <div class="width-full pt-sm-15 pb-sm-15 pt-10 pb-10">
       <v-container>
         <v-row>
-          <v-col class="col-sm-6 col-12 pr-sm-15">
-            <h3 class="heading-3 mb-10">Our Story</h3>
+          <v-col
+            class="col-sm-12 col-12 ml-auto mr-auto"
+            style="max-width: 680px"
+          >
+            <h3 class="heading-3 mb-5 text-center">Our Story</h3>
+            <v-col class="text-center">
+              <img class="ml-auto mr-auto" src="/heart-icon.svg" />
+            </v-col>
+            <div class="col-12 text-center col our-value-block">
+              <h2 class="mt-5">Cause was born from a need for change.</h2>
+            </div>
             <p class="about-pera">
-              Cause was born from a need for change.<br /><br />
-              We heard stories from amazing people, doing amazing things and how
-              they struggled to raise money for their cause.<br /><br />
-              We spoke to Reen who was supporting families with autistic
-              children. She ran community tennis matches and volunteered to
-              drive people on winery tours; all to raise a few hundred
-              dollars.<br /><br />
-              We spoke to Tamara about her passion for supporting a village in
-              Timor-Leste. She was on the speaking circuit.
-              <br /><br />Pensioners were contributing $20 to support her cause.
-              We thought… surely there has to be a better, simpler and smarter
-              way for these extraordinary people to do good.
+              <strong>We heard stories</strong> from amazing people, doing
+              amazing things and how they struggled to raise money for their
+              cause.<br /><br />
+              <strong>We spoke to Reen</strong> who was supporting families with
+              autistic children. She ran community tennis matches and
+              volunteered to drive people on winery tours; all to raise a few
+              hundred dollars. <br /><br />
+              <strong>We spoke to Tamara</strong> about her passion for
+              supporting a village in Timor-Leste. She was on the speaking
+              circuit. Pensioners were contributing $20 to support her cause.<br /><br />
+              <strong>We thought…</strong> surely there has to be a better,
+              simpler and smarter way for these extraordinary people to do
+              good.<br /><br />
+              <strong>We partner</strong> with a wide range of online stores who
+              agree to provide a little commission anytime someone shops with
+              them via the Cause website. And we donate up to 80% of this
+              commission to the cause the customer chooses.<br /><br />
+              <strong>Everyone wins.</strong> Supporters save money with special
+              deals and offers from our partners. Our partners get sales. We get
+              a share of the commission to enable us to invest in our staff,
+              develop new technology and spread the word. <br /><br /><strong
+                >And most importantly, charities get the donations they need to
+                do good.</strong
+              >
             </p>
+            <div class="col-12 text-center col our-value-block">
+              <h2 class="mt-5">
+                Best of all, it’s all completely free. No gimmicks. No hidden
+                fees. Ever.
+              </h2>
+            </div>
           </v-col>
 
-          <v-col
+          <!-- <v-col
             class="col-sm-6 col-12 pl-sm-16 align-self-center about-right-side"
           >
             <img class="width-full" src="RedCrossBackground.jpg" />
-          </v-col>
-        </v-row>
-      </v-container>
-    </div>
-    <div class="about-left-image relative pb-15">
-      <!-- <v-col class="col-6 pa-0 align-self-center pr-16">
-        <img class="width-full" src="ShopBackground.jpg" />
-      </v-col> -->
-      <v-container class="">
-        <v-row>
-          <v-col
-            class="col-sm-6 col-12 align-self-center pr-sm-15 about-left-side"
-          >
-            <img class="width-full" src="ShopBackground.jpg" />
-          </v-col>
-          <v-col class="col-sm-6 col-12 offset-sm-6 pl-sm-16 align-self-center">
-            <p class="about-pera">
-              We partner with a wide range of online stores who agree to provide
-              a little commission anytime someone shops with them via the Cause
-              website. And we donate up to 80% of this commission to the cause
-              the customer chooses.<br /><br />
-              Everyone wins. Supporters save money with special deals and offers
-              from our partners. Our partners get sales. We get a share of the
-              commission to enable us to invest in our staff, develop new
-              technology and spread the word. <br /><br />And most importantly,
-              charities get the donations they need to do good. Best of all,
-              it’s all completely free. No gimmicks. No hidden fees. Ever.
-            </p>
-          </v-col>
+          </v-col> -->
         </v-row>
       </v-container>
     </div>
@@ -105,10 +102,10 @@
       class="primary-dark-bg counter-main-wrapper charity-wrapper pt-15 pb-15"
     >
       <v-container>
+        <h2 class="text-primary-color text-center width-full mb-14">
+          More Stores. More Donations. More Impact.
+        </h2>
         <v-row no-gutters>
-          <h2 class="text-primary-color text-center width-full mb-14">
-            More Stores. More Donations. More Impact.
-          </h2>
           <counter class="col-4" number="1,000+" description="Store" />
           <counter class="col-4" number="57,000+" description="Charities" />
           <counter

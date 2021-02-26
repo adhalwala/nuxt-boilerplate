@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <div class="home-page charity-page">
+  <div class="charity-page">
+    <div class="home-page">
       <v-container>
         <v-row>
           <div class="d-flex col-12 pt-3 pt-sm-2 align-center">
@@ -11,12 +11,16 @@
           </div>
           <div class="d-flex width-full">
             <banner
-              class="col-12 col-sm-5 left-side-home mt-4 mt-sm-0"
-              :bannertitle="charitytitle.name"
+              class="col-12 m-height-500 home-main-heart-banner col-sm-5 left-side-home mt-4 mt-sm-0"
+              :bannertitle="charitytitle"
               icon="mdi mdi-heart"
               label="Register interest"
             />
-            <banner-image class="col-7 d-flex" />
+            <banner-image
+              :bannerimage="charitybanner"
+              :itemslogo="charitybannertop"
+              class="col-7 d-flex"
+            />
           </div>
         </v-row>
       </v-container>
@@ -90,9 +94,11 @@
                 :isLightbtn="true"
                 class="col-sm-4 col-md-3 pl-5 pr-5 mb-4"
               />
-              <button class="learn-more-btn ml-auto mr-auto mt-4">
-                Load More <v-icon>mdi-chevron-down</v-icon>
-              </button>
+              <v-col cols="12" class="text-center">
+                <button class="learn-more-btn ml-auto mr-auto mt-2">
+                  Load More
+                </button>
+              </v-col>
             </v-row>
           </v-row>
         </v-col>
@@ -371,14 +377,15 @@ export default {
         {
           name: 'Get Donations. Free.',
         },
+      ],
+      charitybanner: [
         {
-          name: 'Chicken',
+          src: '/ShopBackground.jpg',
         },
+      ],
+      charitybannertop: [
         {
-          name: 'Fix a Well',
-        },
-        {
-          name: 'Build a School',
+          src: '/cause-logo.svg',
         },
       ],
     }
